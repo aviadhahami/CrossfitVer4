@@ -1,7 +1,14 @@
-<div id="footer">
-    <h1>FOOTER</h1>
+<hr>
+
+<footer>
+    <p>© Company 2012</p>
+</footer>
+
 </div>
-</div>
+<!-- /container -->
+
+<?php wp_footer(); ?>
+
 </body>
 
 </html>
