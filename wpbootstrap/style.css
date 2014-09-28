@@ -13,13 +13,10 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
 This is an example theme to go along with the Treehouse blog post on <a href="http://teamtreehouse.com/how-to-build-a-responsive-wordpress-site-with-twitter-bootstrap">How to Build a Simple Responsive WordPress Site Using Twitter Bootstrap</a>.
 */
 
-/**@import url('bootstrap/css/bootstrap.css');
+@import url('bootstrap/css/bootstrap.css');
 @import url('bootstrap/css/bootstrap-responsive.css');
-*/
 
-@import url("bootstrap/css/bootstrap-theme.css");
-@import url("css/animate.css");
-@import url("css/owl.carousel.css");
-@import url("css/superslides.css");
-@import url("css/font-awesome.min.css");
- body {}
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
