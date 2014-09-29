@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-8">
                 <div id="main_content" role="main">
-                
+                <h1>TRYY</h1>
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
                     <h2 class="page-title"><?php the_title(); ?></h2>

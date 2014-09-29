@@ -42,8 +42,8 @@
                               <i class="fa fa-bars fa-stack-1x"></i>
                             </span>
                         </button>
-                        <a class="navbar-brand page-scroll" href="#page-top">
-                            <img src="wp-content/themes/crossfitThemeResponsive/img/logo_white.png" class="logo_pic" />
+                        <a class="navbar-brand page-scroll" href="http://crossfitherzliya.com/">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/logo_white.png" class="logo_pic" />
                         </a>
                     </div>
 
