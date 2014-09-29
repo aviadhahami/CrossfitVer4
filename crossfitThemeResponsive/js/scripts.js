@@ -28,7 +28,8 @@ $('#slides').bind('animating.slides', function() {
                 $(this).find('img').fadeTo(500, 1).delay(2000);
 });
     
-$('.postContent').find('ul').addClass('fa-ul').find('li').prepend('<i class="fa-li fa fa-check-square-o"></i>');    
+$('.postContent').find('ul').addClass('fa-ul').find('li').prepend('<i class="fa-li fa fa-check-square-o"></i>'); 
+    $('.widget_archive').find('ul').addClass('fa-ul').find('li').find('a').prepend('<i class="fa-li fa fa-chevron-left"></i>'); 
 
    var post = $("#post");
    var recent = $("#recent");

@@ -8,11 +8,13 @@ if ( ! isset( $content_width ) ) $content_width = 730;
  *
  * @uses wp_enqueue_script action
  */
-function my_scripts_method() {
-  wp_enqueue_script( 'jquery' );
-}    
 
-add_action('wp_enqueue_scripts', 'my_scripts_method');
+/*function my_scripts_method() {
+  wp_enqueue_script( 'jquery' );
+}  
+
+add_action('wp_enqueue_scripts', 'my_scripts_method');*/
+
 
 // Contains all functions essential to setting the theme
 require 'inc/theme-setup.php';

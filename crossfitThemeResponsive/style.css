@@ -12,15 +12,29 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 @import url('css/bootstrap.css');
 @import url('css/bootstrap-theme.css');
-@import url('css/font-awesome.css');
 @import url('css/owl.carousel.css');
 @import url('css/superslides.css');
+@import url('css/font-awesome.css');
 
- body {
-    background-color: whitesmoke;
-    /* should specify this with the background color theme option */
-    padding-top: 60px;
-    font-size: 16px;
+@import url(http://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+
+html {
+  font-family: "open sans hebrew", "open sans", sans-serif, arial;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    background-image: none;
+}
+body {
+ overflow: auto;
+  font-family: "open sans hebrew", "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: rgb(245, 245, 245);
 }
 a:hover {
     color: #E5450F;

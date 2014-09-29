@@ -1,0 +1,22 @@
+@import url(http://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+
+html {
+  font-family: "open sans hebrew", "open sans", sans-serif, arial;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+body {
+    overflow: auto;
+  font-family: "open sans hebrew", "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: rgb(245, 245, 245);
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    background-image: none;
+}

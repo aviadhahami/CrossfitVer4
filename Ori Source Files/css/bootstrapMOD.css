@@ -5,8 +5,12 @@
  */
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+@import url(http://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+
+
 html {
-  font-family: sans-serif;
+  font-family: "open sans hebrew", "open sans", sans-serif, arial;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -895,11 +899,12 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow: auto;
+  font-family: "open sans hebrew", "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background-color: rgb(245, 245, 245);
 }
 input,
 button,
@@ -3175,6 +3180,7 @@ tbody.collapse.in {
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
+    background-image: none;
   color: #fff;
   text-decoration: none;
   background-color: #428bca;
