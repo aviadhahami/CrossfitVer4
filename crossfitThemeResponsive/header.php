@@ -36,7 +36,7 @@
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-top-collapse">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                             <span class="fa-stack fa-lg">
                               <i class="fa fa-square fa-stack-2x fa-inverse"></i>
                               <i class="fa fa-bars fa-stack-1x"></i>

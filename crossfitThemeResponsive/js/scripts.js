@@ -6,7 +6,8 @@ $(document).ready(function() {
     });
   });
     
-    
+    $('.dropdown-toggle').dropdown();
+
       $('#slides').superslides({
     slide_easing: 'easeInOutCubic',
       play: 7000,
