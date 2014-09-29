@@ -13,12 +13,13 @@
         <title>
             <?php wp_title( ''); ?>
         </title>
-        <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-        <?php wp_enqueue_script("jquery"); ?>
+        <!--<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />-->
+       <!--  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>-->
+        <?php //wp_enqueue_script("jquery"); ?>
 
         <!-- SHIT LOAD OF LINKS -->
 
-        <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+       
         <?php wp_head(); ?>
         
     

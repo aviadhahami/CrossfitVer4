@@ -14,6 +14,10 @@ if ( ! isset( $content_width ) ) $content_width = 730;
 }  
 
 add_action('wp_enqueue_scripts', 'my_scripts_method');*/
+/*if( !is_admin()){
+wp_deregister_script('jquery');
+wp_register_script('jquery', ("//code.jquery.com/jquery-2.1.1.js"), false, '2.1.1');
+wp_enqueue_script('jquery');}*/
 
 
 // Contains all functions essential to setting the theme
