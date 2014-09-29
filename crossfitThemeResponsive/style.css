@@ -1,0 +1,359 @@
+/*
+Theme Name: CrossfitTheme
+Theme URI: crossfitTheme
+Description: A WordPress theme that uses Bootstrap. Heavily based on the 'bestreloaded' theme from Blogging Experiment
+Author: Aviad Hahami
+Author URI: http://pattonwebz.com/
+Version: 0.3
+
+License: GNU General Public License (3.0)
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+@import url('css/bootstrap.css');
+@import url('css/bootstrap-theme.css');
+@import url('css/font-awesome.css');
+@import url('css/owl.carousel.css');
+@import url('css/superslides.css');
+
+ body {
+    background-color: whitesmoke;
+    /* should specify this with the background color theme option */
+    padding-top: 60px;
+    font-size: 16px;
+}
+a:hover {
+    color: #E5450F;
+    text-decoration: underline;
+}
+a {
+    color: #F26535;
+    text-decoration: none;
+}
+/* responsive images */
+
+img,
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail,
+.wp-caption {
+    max-width: 100%;
+    height: auto;
+}
+.carousel.slide {
+    position: relative;
+    overflow: hidden;
+    padding: 9px;
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    -webkit-box-shadow: 0 1px 5px #EEE;
+    -moz-box-shadow: 0 1px 5px #eeeeee;
+    box-shadow: 0 1px 5px #EEE;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.wp-caption {
+    padding: 9px;
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    -webkit-box-shadow: 0 1px 5px #EEE;
+    -moz-box-shadow: 0 1px 5px #eeeeee;
+    box-shadow: 0 1px 5px #EEE;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 85%;
+}
+.wp-caption-text {
+    margin: 10px;
+    text-align: justify;
+}
+.wp-caption img {
+    border-radius: 5px;
+}
+.sticky {} .gallery-caption {} .bypostauthor {} .alignright {
+    float: right;
+    margin-left: 8px;
+    margin-bottom: 10px;
+}
+.alignleft {
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto;
+}
+/* --------------------------------------- *
+ * Typography                               *
+ * ---------------------------------------- */
+
+#main_content > p {
+    margin: 0 0 20px;
+    line-height: 1.5em;
+}
+.hero-p {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 22px;
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-align: center;
+}
+.hero-p.hero-mini {
+    font-size: 20px;
+    display: inline-block;
+}
+.meta.entry-meta {
+    color: #666;
+    font-style: italic;
+}
+#post-open-meta > hr.hr-top,
+#post-open-meta > hr.hr-bottom {
+    margin: 0;
+}
+#post-open-meta > hr.hr-top {
+    margin-top: 25px;
+}
+#post-open-meta > .pager {
+    margin: 10px 0;
+}
+#post-open-meta > div.sharedaddy div.sd-block {
+    border-top: inherit !important;
+}
+/* --------------------------------------- *
+ * Typography                               *
+ * Lot of this is handled by Jquery         *
+ * ---------------------------------------- */
+
+.gform_validation_container {
+    display: none;
+}
+/* --------------------------------------- *
+  * featured bar styles                     *
+  * --------------------------------------- */
+
+.featured-bar {
+    background-color: #f5f5f5;
+    background-image: url("img/featured-bg-thumb-up.png");
+    background-repeat: no-repeat;
+    background-position: -1% 50%;
+    padding: 30px 60px;
+    margin: 0 -30px 20px;
+    text-shadow: none;
+}
+.featured-bar.featured-bar-post {
+    margin: 0 0 10px -30px;
+    padding: 15px 15px 15px 30px;
+}
+/* --------------------------------------- *
+ * Effects                *
+ * --------------------------------------- */
+
+/* thumbnail effect */
+
+.post-thumb {
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+    bottom: 0;
+    -webkit-transition: bottom 0.3s ease-in-out;
+    -moz-transition: bottom 0.3s ease-in-out;
+    -ms-transition: bottom 0.3s ease-in-out;
+    -o-transition: bottom 0.3s ease-in-out;
+    transition: bottom 0.3s ease-in-out;
+}
+.post-thumb span {
+    display: block;
+    padding: 5px;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    -webkit-transition: box-shadow 0.3s ease-in-out;
+    -moz-transition: box-shadow 0.3s ease-in-out;
+    -ms-transition: box-shadow 0.3s ease-in-out;
+    -o-transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.post-thumb img {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.post-thumb:hover span {
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.post-thumb:hover {
+    bottom: 10px;
+}
+/* --------------------------------------- *
+ * Homepage Specific Items                 *
+ * --------------------------------------- */
+
+.blog-three-up .entry-title {
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+.container.container-main.container-wrapper,
+.container.container-main.footer-top {
+    padding: 25px 30px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+.container.container-main.footer-top {
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+    padding: 35px 60px 10px;
+    margin-bottom: 20px;
+}
+.name-text hgroup h1,
+.name-text span.h1 {
+    font-size: 80px;
+    font-size: 8rem;
+    line-height: 1em;
+    letter-spacing: -0.05em;
+    font-weight: 100;
+}
+.site-title a:hover {
+    text-decoration: none;
+}
+/* ------------------------------------- *
+ * Social sharing block                  *
+ * ------------------------------------- */
+
+#social-block {
+    background: white;
+    z-index: 200;
+}
+.affix {
+    top: 50px;
+}
+/* ------------------------------------- *
+ * Widgets                               *
+ * ------------------------------------- */
+
+.widget ul,
+.widget ol {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 5px 0;
+    line-height: 24px;
+}
+.widget ul li,
+.widget ol li {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-left: 0;
+}
+.widget ul li a,
+.widget ol li a {
+    display: block;
+    padding: 5px 0;
+    -webkit-transition: margin .3s;
+    -moz-transition: margin .3s;
+    -ms-transition: margin .3s;
+    -o-transition: margin .3s;
+    transition: margin .3s;
+}
+.widget ul li a:hover,
+.widget ol li a:hover {
+    margin-left: 10px;
+    text-decoration: none;
+}
+.widget ul li a:before,
+.widget ol li a:before {
+    content: "\2192 \0020";
+}
+.widget #recentcomments li {
+    padding: 5px 0;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+.widget #recentcomments,
+.widget #recentcomments li {
+    letter-spacing: 1px;
+}
+/* ------------------------------------- *
+ * Comments                              *
+ * ------------------------------------- */
+
+li.comment,
+.pingback {
+    list-style: none;
+}
+article.comment,
+.pingback {
+    position: relative;
+    padding: 20px;
+    margin: 15px 0;
+    background-color: #FCFCFC;
+    border: 1px solid #E3E3E3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 20px #F2F2F2;
+    -moz-box-shadow: inset 0 0 20px #f2f2f2;
+    box-shadow: inset 0 0 20px #F2F2F2;
+    line-height: 1.7;
+    font-size: 15px;
+}
+.avatar {
+    float: left;
+    padding: 3px;
+    margin-right: 14px;
+    margin-bottom: 8px;
+    background: #FFF;
+    border: 1px solid #E3E3E3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 4px #E9E9E9;
+    -moz-box-shadow: 0 2px 4px #e9e9e9;
+    box-shadow: 0 2px 4px #E9E9E9;
+}
+/* ------------------------------------- *
+ * Media Queries                         *
+ * ------------------------------------- */
+
+@media (min-width: 768px) {
+    .container.container-main.container-wrapper,
+    .container.container-main.footer-top {
+        padding: 35px 60px;
+    }
+    .featured-bar {
+        margin: 0 -60px 20px;
+    }
+    .featured-bar.featured-bar-post {
+        margin: 0 0 10px -60px;
+        padding: 15px 15px 15px 60px;
+    }
+    .hero-p {
+        font-size: 26px;
+    }
+    .hero-p.hero-mini {
+        font-size: 22px;
+    }
+}
+@media (min-width: 1320px) {
+    .container.container-main {
+        width: 1290px;
+    }
+}
