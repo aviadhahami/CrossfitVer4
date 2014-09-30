@@ -67,25 +67,41 @@
                          <h1 id="widget">
                     אימונים קודמים  
                     </h1>
-                                                <div class="recentPost inner-top-xxs-img inner-bottom-xxs-img" style="direction: ltr;">
+                      <div class="recentPost inner-top-xxs-img inner-bottom-xxs-img" style="direction: ltr;">
                             <div class="container-fluid">
                                 <div class="row-fluid">
                                     <div class="owl-carousel" id="recent">
                                         
-                                        
-                                        
-                                         <div class="grid">
-                                            <figure class="effect-bubba">
-                                                <img src="img/blank.gif" class="recentImg" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/keg.jpg.jpg);">
+                                        <?php
+                                           $args = array( 'numberposts' => '7', 'category' => 'wod', );
+                                            $recent_posts = wp_get_recent_posts( $args );
+                                            foreach( $recent_posts as $recent ){
+                                                echo ' <div class="grid">
+                                                        <figure class="effect-bubba">
+                                                          <!--  <a href="' . get_permalink($recent["ID"]) . '"> -->
+                                                <img src="http://sk32.co.nf/wp-content/themes/crossfitThemeResponsive/img/blank.gif" class="recentImg" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/keg.jpg.jpg);">
                                                 <figcaption>
-                                                    <h2>כותרת</h2>
+                                                <a href="' . get_permalink($recent["ID"]) . '">
+                                                    <h2>' . $recent["post_title"] . '</h2>
                                                     <p>23 בספטמבר 2014</p>
+                                                    </a>
                                                 </figcaption>
+                                               <!-- </a> -->
                                             </figure>
-                                        </div>
+                                        </div>';
+                                            }
+                                         ?>
+                                        <?php  ?>
+                                        
+
+                                        
+                                        
+                                        
+                                        
                                     </div>
                                 </div>
-                                                    </div></div>
+                            </div>
+                        </div>
                         
                         
                         
