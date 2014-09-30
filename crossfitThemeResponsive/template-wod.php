@@ -12,7 +12,7 @@
  <? query_posts('category_name=wod');  while ( have_posts() ) : the_post();?>
 
 
-             <section class="content outer-md" style="direction: rtl;">
+             <section class="content outer-md">
             <div class="container">
                 <!-- /.row -->
              <div class="row">
@@ -20,7 +20,7 @@
                     <!-- /.right col -->
                     <div class="col-md-9 col-md-push-3">
                         <div class="postContent inner-padding-left-sm inner-padding-right-sm inner-bottom-xxs">
-                            <div class="postHeader" style="direction:ltr;">
+                            <div class="postHeader">
                                 <h1 id="title">
                     <?php the_title(); ?>
                                 </h1>
@@ -35,19 +35,18 @@
                                      <!--With &nbsp;-->
                                      <i class="fa fa-comment"></i>&nbsp;
                                      <div style="display: inline;">
-                                         <a href="#">9 comments</a>&nbsp;&nbsp;
+                                         <a href="#">9 תגובות</a>&nbsp;&nbsp;
                                      </div>
                                      <!--and &nbsp;-->
                                      <i class="fa fa-heart"></i>&nbsp;
                                      <div style="display: inline;">
-                                         <a href="#">145 likes</a>&nbsp;&nbsp;
+                                         <a href="#">145 לייקים</a>&nbsp;&nbsp;
                                      </div>                                                                
                         </h4>
                             </div>
     <div class="postBody inner-bottom-xxs">
                                 <!-- fixing owlcarousel bug with rtl-->
                                 <section style="direction: ltr;">
-                                    <div style="height: 300px;">
                                     <div class="owl-carousel" id="post">
                                         <figure>
                                             <img src="<?php bloginfo('template_directory'); ?>/img/blank.gif" width="100%" height="300px" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/1500809_1492267730992915_1049592175577989962_o-1024x682.jpg); background-position: center;">
@@ -60,7 +59,8 @@
                                         </figure>
 
                                     </div>
-                                        </div>                                </section>
+                                        
+        </section>
 <?php the_content(); ?>
          </div>
                             
