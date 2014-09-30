@@ -11,25 +11,38 @@
 
  <? query_posts('category_name=wod');  while ( have_posts() ) : the_post();?>
 
-<div class="row">
+
              <section class="content outer-md" style="direction: rtl;">
             <div class="container">
                 <!-- /.row -->
-                <div class="row">
+             <div class="row">
 
                     <!-- /.right col -->
                     <div class="col-md-9 col-md-push-3">
                         <div class="postContent inner-padding-left-sm inner-padding-right-sm inner-bottom-xxs">
-                            <div class="postHeader">
+                            <div class="postHeader" style="direction:ltr;">
                                 <h1 id="title">
                     <?php the_title(); ?>
                                 </h1>
                                  <h4>
-                     <i class="fa fa-user"></i><div class="outer-left-xs" style="display: inline;"> <?php the_author_link(); ?></div>
-<i class="fa fa-calendar"></i><div class="outer-left-xs" style="display: inline;"><?php the_time('F j, Y'); ?></div>          
-                    <i class="fa fa-comment"></i><div class="outer-left-xs" style="display: inline;"><a href="#"> 8 תגובות </a></div>
-                            <i class="fa fa-heart"></i><div class="outer-left-xs" style="display: inline;"><a href="#"> 145 לייקים </a></div>
-                        </h4></div>
+                                     Written by &nbsp;
+                                     <i class="fa fa-user"></i>
+                                     <div class="outer-left-xs" style="display: inline;">  <?php the_author_link(); ?>,</div>
+                                     On &nbsp;
+                                     <i class="fa fa-calendar"></i>
+                                     <div class="outer-left-xs" style="display: inline;"><?php the_time('F j, Y'); ?>. &nbsp;</div>       
+                                     With &nbsp;
+                                     <i class="fa fa-comment"></i>
+                                     <div class="outer-left-xs" style="display: inline;">
+                                         <a href="#">9 comments</a>&nbsp;
+                                     </div>
+                                     and &nbsp;
+                                     <i class="fa fa-heart"></i>
+                                     <div class="outer-left-xs" style="display: inline;">
+                                         <a href="#">145 likes</a>&nbsp;
+                                     </div>
+                        </h4>
+                            </div>
     <div class="postBody inner-bottom-xxs">
                                 <!-- fixing owlcarousel bug with rtl-->
                                 <section style="direction: ltr;">
@@ -78,15 +91,13 @@
                                             foreach( $recent_posts as $recent ){
                                                 echo ' <div class="grid">
                                                         <figure class="effect-bubba">
-                                                          <!--  <a href="' . get_permalink($recent["ID"]) . '"> -->
+                                                <a href="' . get_permalink($recent["ID"]) . '">
                                                 <img src="http://sk32.co.nf/wp-content/themes/crossfitThemeResponsive/img/blank.gif" class="recentImg" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/keg.jpg.jpg);">
                                                 <figcaption>
-                                                <a href="' . get_permalink($recent["ID"]) . '">
                                                     <h2>' . $recent["post_title"] . '</h2>
-                                                    <p>23 בספטמבר 2014</p>
-                                                    </a>
+                                                    <p>' .  mysql2date('Y / m / j', $recent["post_date"]) . '</p>
                                                 </figcaption>
-                                               <!-- </a> -->
+                                               </a>
                                             </figure>
                                         </div>';
                                             }
@@ -103,7 +114,7 @@
                             </div>
                         </div>
                         
-                        
+                    
                         
                         
                         
