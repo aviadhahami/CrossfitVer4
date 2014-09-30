@@ -25,40 +25,42 @@
                     <?php the_title(); ?>
                                 </h1>
                                  <h4>
-                                     Written by &nbsp;
-                                     <i class="fa fa-user"></i>
-                                     <div class="outer-left-xs" style="display: inline;">  <?php the_author_link(); ?>,</div>
-                                     On &nbsp;
-                                     <i class="fa fa-calendar"></i>
-                                     <div class="outer-left-xs" style="display: inline;"><?php the_time('F j, Y'); ?>. &nbsp;</div>       
-                                     With &nbsp;
-                                     <i class="fa fa-comment"></i>
-                                     <div class="outer-left-xs" style="display: inline;">
-                                         <a href="#">9 comments</a>&nbsp;
+                                     <!-- CRAP TEXT WHY AVIAD? -->
+                                     <!--Written by &nbsp;-->
+                                     <i class="fa fa-user"></i>&nbsp;
+                                     <div style="display: inline;"> <?php the_author_link(); ?>&nbsp;&nbsp;</div>
+                                     <!--On &nbsp;-->
+                                     <i class="fa fa-calendar"></i>&nbsp;
+                                     <div style="display: inline;"><?php the_time('F j, Y'); ?>&nbsp;&nbsp;</div>       
+                                     <!--With &nbsp;-->
+                                     <i class="fa fa-comment"></i>&nbsp;
+                                     <div style="display: inline;">
+                                         <a href="#">9 comments</a>&nbsp;&nbsp;
                                      </div>
-                                     and &nbsp;
-                                     <i class="fa fa-heart"></i>
-                                     <div class="outer-left-xs" style="display: inline;">
-                                         <a href="#">145 likes</a>&nbsp;
-                                     </div>
+                                     <!--and &nbsp;-->
+                                     <i class="fa fa-heart"></i>&nbsp;
+                                     <div style="display: inline;">
+                                         <a href="#">145 likes</a>&nbsp;&nbsp;
+                                     </div>                                                                
                         </h4>
                             </div>
     <div class="postBody inner-bottom-xxs">
                                 <!-- fixing owlcarousel bug with rtl-->
                                 <section style="direction: ltr;">
+                                    <div style="height: 300px;">
                                     <div class="owl-carousel" id="post">
                                         <figure>
-                                            <img src="<?php bloginfo('template_directory'); ?>/img/blank.gif" class="alignnone size-large wp-image-241" width="100%" height="300px" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/1500809_1492267730992915_1049592175577989962_o-1024x682.jpg); background-position: center;">
+                                            <img src="<?php bloginfo('template_directory'); ?>/img/blank.gif" width="100%" height="300px" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/1500809_1492267730992915_1049592175577989962_o-1024x682.jpg); background-position: center;">
                                         </figure>
                                         <figure>
-                                            <img src="<?php bloginfo('template_directory'); ?>/img/blank.gif" class="alignnone size-large wp-image-241" width="100%" height="300px" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/10646665_663231047125623_553418727478072200_n.jpg); background-position: center;">
+                                            <img src="<?php bloginfo('template_directory'); ?>/img/blank.gif"  width="100%" height="300px" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/10646665_663231047125623_553418727478072200_n.jpg); background-position: center;">
                                         </figure>
                                         <figure>
-                                            <img src="<?php bloginfo('template_directory'); ?>/img/blank.gif" class="alignnone size-large wp-image-241" width="100%" height="300px" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/10497847_638453889603339_6243190989343349154_o.jpg); background-position: center;">
+                                            <img src="<?php bloginfo('template_directory'); ?>/img/blank.gif"  width="100%" height="300px" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/10497847_638453889603339_6243190989343349154_o.jpg); background-position: center;">
                                         </figure>
 
                                     </div>
-                                </section>
+                                        </div>                                </section>
 <?php the_content(); ?>
          </div>
                             

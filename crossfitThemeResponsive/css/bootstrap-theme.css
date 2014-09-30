@@ -847,6 +847,12 @@ figure.effect-bubba:hover h2 {
     -o-transition: 0.5s ease-in-out;
     /* Opera */
 }
+
+/* overriding bootstrap.css */
+.label-default[href]:hover,
+.label-default[href]:focus {
+  background-color: #2d9bd1;
+}
 /** COMMENTS **/
 
 .blogComments {
