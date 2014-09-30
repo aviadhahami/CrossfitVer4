@@ -63,7 +63,34 @@
                                <? the_tags( '<span class="post-tags"><span class="meta">Tags:</span> ', ' ', '</span>' ); ?>     </div>
                             </div>
                         </div>
-                                
+                       
+                         <h1 id="widget">
+                    אימונים קודמים  
+                    </h1>
+                                                <div class="recentPost inner-top-xxs-img inner-bottom-xxs-img" style="direction: ltr;">
+                            <div class="container-fluid">
+                                <div class="row-fluid">
+                                    <div class="owl-carousel" id="recent">
+                                        
+                                        
+                                        
+                                         <div class="grid">
+                                            <figure class="effect-bubba">
+                                                <img src="img/blank.gif" class="recentImg" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/keg.jpg.jpg);">
+                                                <figcaption>
+                                                    <h2>כותרת</h2>
+                                                    <p>23 בספטמבר 2014</p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                                    </div></div>
+                        
+                        
+                        
+                        
+                        
                                 
                                 
 							
