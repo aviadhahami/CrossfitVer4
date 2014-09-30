@@ -6,7 +6,8 @@ $(document).ready(function() {
     });
   });
     
-    $('.dropdown-toggle').dropdown();
+    // SUPER IMPORTANT NAVBAR DROPDOWN //
+    $('.dropdown-toggle').dropdownHover();
 
       $('#slides').superslides({
     slide_easing: 'easeInOutCubic',
