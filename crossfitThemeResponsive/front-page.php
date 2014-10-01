@@ -1,6 +1,6 @@
  <? get_header() ?>
 <!-- Set up your HTML -->
-<div id="slides" style="background: black;">
+<div id="slides" style="background: black; direction: ltr;">
   <ul class="slides-container">
     <li>
       <img class="slider_pic"  src="<?php bloginfo('template_directory'); ?>/img/headerPhoto1.png" />

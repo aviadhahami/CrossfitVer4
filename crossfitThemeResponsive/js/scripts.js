@@ -6,6 +6,10 @@ $(document).ready(function() {
     });
   });
     
+    // OPTIONAL - NOT REALLY NEEDED 
+    //$('.dropdown-toggle').dropdownHover();
+    
+    // REQUIRED FOR DROPDOWN HOVER for mobile.
     $('.dropdown-toggle').dropdown();
 
       $('#slides').superslides({
@@ -79,31 +83,6 @@ recent.on('mousewheel', '.owl-stage', function (e) {
 });
 
 
-/*var posts = $('#post');   
-posts.owlCarousel({
-    loop:true,
-    nav:false,
-      autoplay:true,
-    animateOut: 'fadeOut',
-    mouseDrag:false,
-    touchDrag:false,
-    pullDrag:false,
-    autoplayTimeout:3000,
-    margin:10,
-    items:1
-});
-    
-    var recent = $('#recent');
-    recent.owlCarousel({
-    loop:true,
-    nav:true;
-    margin:10,
-    items:3
-});*/
-    
-   
-
-
   var hammer = new Hammer(document.getElementById("slides"))
 
   hammer.on('swipeleft', function(ev) {
@@ -116,7 +95,7 @@ posts.owlCarousel({
     
 
     
-     $('.navbar-collapse').mousewheel(function(event) {
+ /*    $('.navbar-collapse').mousewheel(function(event) {
           var scrollTop = this.scrollTop;
           this.scrollTop = (scrollTop + ((event.deltaY * event.deltaFactor) * -1));
           console.log(event.deltaY, event.deltaFactor, event.originalEvent.deltaMode, event.originalEvent.wheelDelta);
@@ -131,29 +110,14 @@ else
 {
    console.log('You are not using a mobile device!');
     
-    /*document.ontouchmove = function(e) {
+    document.ontouchmove = function(e) {
     e.preventDefault();
-  };*/
+  };
     
     $(".navbar-collapse").css("overflow","hidden");
     
-}
+}*/
     
-    // TAGS HOVER EFFECT // 
-/*    
-    $(".tag *").on("mouseover", function(){
-    $(this).animate({ 
-        
-    width: "70%",
-    opacity: 0.4,
-    marginLeft: "0.6in",
-    fontSize: "3em", 
-    borderWidth: "10px"
-  }, 1500 );
-        console.log('SOULD');
-}).on("mouseleave", function(){
-    $(this).animate({color:'#fff'},'slow');
-});*/
                
 
 });
