@@ -87,13 +87,14 @@
                                     <div class="owl-carousel" id="recent">
                                         
                                         <?php
+                                            $src =bloginfo('template_directory') . '/img/blank.gif';
                                            $args = array( 'numberposts' => '7', 'category' => 'wod', );
                                             $recent_posts = wp_get_recent_posts( $args );
                                             foreach( $recent_posts as $recent ){
                                                 echo ' <div class="grid">
                                                         <figure class="effect-bubba">
                                                 <a href="' . get_permalink($recent["ID"]) . '">
-                                                <img src="http://sk32.co.nf/wp-content/themes/crossfitThemeResponsive/img/blank.gif" class="recentImg" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/keg.jpg.jpg);">
+                                                <img src="http://crossfitherzliya.com/sandbox/wp-content/themes/crossfitThemeResponsive/img/blank.gif" class="recentImg" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/keg.jpg.jpg);">
                                                 <figcaption>
                                                     <h2>' . $recent["post_title"] . '</h2>
                                                     <p>' .  mysql2date('Y / m / j', $recent["post_date"]) . '</p>
@@ -101,6 +102,8 @@
                                                </a>
                                             </figure>
                                         </div>';
+                                                
+                                            
                                             }
                                          ?>
                                         <?php  ?>
