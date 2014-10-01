@@ -95,12 +95,12 @@
                                                         <figure class="effect-bubba">
                                                ';
                                                echo '<img src="'  . get_bloginfo('template_directory') . '/img/blank.gif" class="recentImg" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/keg.jpg.jpg);">';
-                                               echo' <figcaption>
+                                               echo' <figcaption><div class="substringer">
                                                 <a href="' . get_permalink($recent["ID"]) . '">
-                                                    <h2>' . $recent["post_title"] . '</h2>
+                                                    <h2><div class="substringer">' . $recent["post_title"] . '</div></h2>
                                                     <p>' .  mysql2date('Y / m / j', $recent["post_date"]) . '</p>
-                                                    </a>
-                                                </figcaption>
+                                                    </a> 	
+                                                </div></figcaption>
                                                
                                             </figure>
                                         </div>';
