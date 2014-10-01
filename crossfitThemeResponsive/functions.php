@@ -65,21 +65,18 @@ add_filter('the_tags','add_class_the_tags',10,1);*/
 
 
 //Capture post images
-function catch_that_image() {
-  global $post, $posts;
-  $imgArray = [];
-  ob_start();
-  ob_end_clean();
-  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-  $size = sizeof($matches[1]);
-    if ($size <1 ) {
-    return;
-    }
-    for ($i=0;$i<$size;$i++){
-        $imgArray[i] = $output[1][i];
-    }
-  return $imgArray;
+function catch_that_image($post) {
+  $first_img = '';
+  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post['post_content'], $matches);
+  $first_img = $matches[1][0];
+
+  if(empty($first_img)) {
+    $first_img = "http://www.crossfitherzliya.com/wp-content/uploads/2014/09/1500809_1492267730992915_1049592175577989962_o-1024x682.jpg";
+  }
+  return $first_img;
 }
+
+
 
 //remove images from display
 function remove_images( $content ) {
