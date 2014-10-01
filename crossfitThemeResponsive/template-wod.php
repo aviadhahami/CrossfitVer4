@@ -120,7 +120,7 @@
                                         
                                         <?php
                                             //$src =bloginfo('template_directory') . '/img/blank.gif';
-                                           $args = array( 'numberposts' => '7', 'category' => 'wod', );
+                                           $args = array( 'numberposts' => '7', 'category' =>  get_cat_ID('wod'), );
                                             $recent_posts = wp_get_recent_posts( $args );
                                             foreach( $recent_posts as $recent ){
                                                 echo ' <div class="grid">
