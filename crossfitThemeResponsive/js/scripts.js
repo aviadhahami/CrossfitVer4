@@ -6,10 +6,10 @@ $(document).ready(function() {
     });
   });
     
-    // OPTIONAL - NOT REALLY NEEDED 
-    //$('.dropdown-toggle').dropdownHover();
+    // REQUIRED FOR DROPDOWN HOVER for mobile and PC on POSTS PAGES
+    $('.dropdown-toggle').dropdownHover();
     
-    // REQUIRED FOR DROPDOWN HOVER for mobile.
+    // REQUIRED FOR DROPDOWN HOVER for mobile on MAIN PAGE.
     $('.dropdown-toggle').dropdown();
 
       $('#slides').superslides({
