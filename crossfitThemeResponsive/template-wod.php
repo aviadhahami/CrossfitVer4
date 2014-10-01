@@ -73,9 +73,8 @@
 
                                     <!--       fa-inverse-->
 
-                                    <p class="tag">
-                                                            
-                               <? the_tags( '<span class="post-tags"><span class="meta">Tags:</span> ', ' ', '</span>' ); ?>     </div>
+                                    <p class="tag">                         
+                               <? the_tags( 'תגיות:&nbsp;&nbsp;&nbsp;&nbsp;', ' ', ' ' ); ?>     </div>
                             </div>
                         </div>
                        

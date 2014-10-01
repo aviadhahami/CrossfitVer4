@@ -55,10 +55,11 @@ remove_filter( 'the_content', array( 'Jetpack_Likes', 'post_likes' ), 30, 1 );
 add_action( 'loop_end', 'jptweak_remove_share' );
 
 //Add class to the tags for bootstrap markup
-function add_class_the_tags($html){
+// WHY DO WE NEED THIS? .ori
+/*function add_class_the_tags($html){
     $postid = get_the_ID();
     $html = str_replace('<a','<a class="label label-default"',$html);
     return $html;
 }
-add_filter('the_tags','add_class_the_tags',10,1);
+add_filter('the_tags','add_class_the_tags',10,1);*/
 ?>
