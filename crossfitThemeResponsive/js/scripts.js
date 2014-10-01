@@ -35,7 +35,7 @@ $('#slides').bind('animating.slides', function() {
     
 $('.postContent').find('ul').addClass('fa-ul').find('li').prepend('<i class="fa-li fa fa-check-square-o"></i>'); 
     $('.widget_archive').find('ul').addClass('fa-ul').find('li').find('a').prepend('<i class="fa-li fa fa-chevron-left"></i>'); 
-    $('.tag').find('a').prepend('<i class="fa fa-tag"></i>');
+    $('.tag').find('a').prepend('<i class="fa fa-tag"></i> ');
 
    var post = $("#post");
    var recent = $("#recent");
