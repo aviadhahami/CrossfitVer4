@@ -87,19 +87,21 @@
                                     <div class="owl-carousel" id="recent">
                                         
                                         <?php
-                                            $src =bloginfo('template_directory') . '/img/blank.gif';
+                                            //$src =bloginfo('template_directory') . '/img/blank.gif';
                                            $args = array( 'numberposts' => '7', 'category' => 'wod', );
                                             $recent_posts = wp_get_recent_posts( $args );
                                             foreach( $recent_posts as $recent ){
                                                 echo ' <div class="grid">
                                                         <figure class="effect-bubba">
+                                               ';
+                                               echo '<img src="'  . get_bloginfo('template_directory') . '/img/blank.gif" class="recentImg" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/keg.jpg.jpg);">';
+                                               echo' <figcaption>
                                                 <a href="' . get_permalink($recent["ID"]) . '">
-                                                <img src="http://crossfitherzliya.com/sandbox/wp-content/themes/crossfitThemeResponsive/img/blank.gif" class="recentImg" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/keg.jpg.jpg);">
-                                                <figcaption>
                                                     <h2>' . $recent["post_title"] . '</h2>
                                                     <p>' .  mysql2date('Y / m / j', $recent["post_date"]) . '</p>
+                                                    </a>
                                                 </figcaption>
-                                               </a>
+                                               
                                             </figure>
                                         </div>';
                                                 
