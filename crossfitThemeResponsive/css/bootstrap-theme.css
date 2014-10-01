@@ -593,6 +593,12 @@
     -moz-transition: all .15s linear;
     -o-transition: all .15s linear;*/
 }
+
+.substringer {
+    overflow:hidden; 
+    white-space:nowrap; 
+    text-overflow: ellipsis;
+}
 .recentImg {
     background-position: center;
     background-size: cover;
@@ -772,7 +778,7 @@ figure.effect-bubba:hover h2 {
 .grid figure h2 {
     word-spacing: -0.15em;
     overflow: hidden;
-    width: 75%;
+    width: 90%;
     height: 30px;
     font-weight: 300;
     font-size: 1.25em;
