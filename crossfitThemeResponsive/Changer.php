@@ -1,10 +1,11 @@
 <?php
 /* =============================================================
- * single.php
+ * Template Name: wod
  * =============================================================
- * Displays content for a single blog post
+ * Page template used for full width pages
  * ============================================================= */
 ?>
+
 <?php get_header(); ?>
         <?php get_template_part( 'featured', 'bar' ); ?>
 
@@ -152,24 +153,12 @@
                         <!-- END OF PREVIOUS WOD -->
 	
                     
-				    
-                    <?php endwhile; else: ?>
-				    
-                        <p class="hero-p" style="padding: 30px 0;">there is currently nothing to display :(</p>
-				    
-                    <?php endif; ?>
-                   
-              <!--   </div>
-                 <!-- end #main_content -->
-             <!--    <hr class="hr-row-divider">
-                
-                    <?php //comments_template(); ?>
-                
-                <hr class="hr-row-divider">
-            </div><!-- end .col-md-8 -->
+
+                <?php break; endwhile;?>
+
                     
-            <?php //get_sidebar( 'main' ); ?>
-            
-        <!-- </div><!-- end .row --> 
+                </div><!-- end #main_content -->
+            </div><!-- end .col-xs-12 -->
+        </div><!-- end .row -->
 
 <?php get_footer(); ?>
