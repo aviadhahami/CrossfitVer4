@@ -11,15 +11,15 @@ $(function() {
             var val = $(".fa-li").css("right");
             $(".fa-li").css("right", "auto");
             $(".fa-li").css("left", val);
-            fixCounter++;
+            //fixCounter++;
         } else if (typeof $(".postBody ul").attr("dir") == "undefined") {
             //do non
           //  counter++;
         } else {
-            counter++;
+            //counter++;
         }
     }
-    window.setTimeout(fixList,1000);
+    window.setTimeout(fixList, 0);
     /*var fixCounter = 0;
     window.setTimeout(function() {
         if (fixCounter == 0) {
