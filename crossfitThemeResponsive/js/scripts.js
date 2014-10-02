@@ -19,9 +19,11 @@ $(function() {
             //counter++;
         }
     }
+
     window.setTimeout(fixList, 0); 
     /*var fixCounter = 0;
     window.setTimeout(function() {
+
         if (fixCounter == 0) {
             if ( !! $(".fa-li").css("right") != 0) {
                 fixList();
