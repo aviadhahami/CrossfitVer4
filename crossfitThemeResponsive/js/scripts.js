@@ -20,15 +20,15 @@ $(document).ready(function() {
         }
     }
     fixList();
-    var fixCounter = 0;
-    setInterval(function() {
+    /*var fixCounter = 0;
+    window.setTimeout(function() {
         if (fixCounter == 0) {
             if ( !! $(".fa-li").css("right") != 0) {
                 fixList();
                 console.log("fixed the list");
             }
         }
-    }, 1000);
+    }, 1000);*/
 
     //END OF CHANGE LIST DIRECTION
 
