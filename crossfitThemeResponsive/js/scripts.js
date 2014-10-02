@@ -19,7 +19,7 @@ $(function() {
             counter++;
         }
     }
-    fixList();
+    window.setTimeout(fixList,1000);
     /*var fixCounter = 0;
     window.setTimeout(function() {
         if (fixCounter == 0) {
