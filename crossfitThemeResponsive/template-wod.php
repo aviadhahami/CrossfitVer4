@@ -66,11 +66,10 @@
                             $src = wp_get_attachment_image_src($attachment->ID,$imageSize)[0];
                                           echo '<img src="' . get_bloginfo('template_directory') . '/img/blank.gif" width="100%" height="300px" style="background-image: url('.$src.'); background-position: center; background-size: cover;"> ';
 
-                                       echo wp_get_attachment_image( $attachment->ID, 'full' );
+                                       //echo wp_get_attachment_image( $attachment->ID, 'full' );
                                        echo '</figure>';
                                       }
                                  }
-/*wpse_get_images($post,$size);*/
 
                         ?>                                       
                                     
@@ -78,6 +77,7 @@
                                         
                                 </section>
                                 <?php 
+                               
                                 remove_filter( the_content(), 'remove_images', 100 );
                                 //the_content(); 
                                 ?>
