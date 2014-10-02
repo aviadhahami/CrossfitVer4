@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
     /*        $('.postBody').find('li').each(rtlToltrFixer);
     $('.postBody').find('h1').each(rtlToltrFixer);
     $('.postBody').find('h2').each(rtlToltrFixer);
