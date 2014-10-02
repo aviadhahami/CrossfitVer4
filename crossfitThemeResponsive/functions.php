@@ -86,5 +86,39 @@ function remove_images( $content ) {
 add_filter( 'the_content', 'remove_images', 100 );
 
 
+  /**
+     * Gets all images attached to a post
+     * @return string
+     */
+    function wpse_get_images($post,$size) {
+        $id = intval( $post->ID );
+        $attachments = get_children( array(
+                'post_parent' => $id,
+                'post_status' => 'inherit',
+                'post_type' => 'attachment',
+                'post_mime_type' => 'image',
+                'order' => 'ASC',
+                'orderby' => 'menu_order'
+            ) );
+        if ( empty( $attachments ) )
+                    return '';
+
+        $output = "\n";
+    /**
+     * Loop through each attachment
+     */
+    foreach ( $attachments as $id  => $attachment ) :
+
+        $img = wp_get_attachment_image_src( $id, $size );
+        $output .='<figure>';
+         $output.= '<img src="' . get_bloginfo('template_directory') . '/img/blank.gif" width="100%" height="300px" style="background-image: url('. esc_url( $img[0] ).'); background-position: center; background-size: cover;"> ';
+
+       
+  $output .='</figure>';
+    endforeach;
+
+        return $output;
+    }
+
 
 ?>
