@@ -71,17 +71,7 @@
                                  }
 
                         ?>                                       
-                                        
-                                       <!-- <figure>
-                                            <img src="<?php bloginfo('template_directory'); ?>/img/blank.gif" width="100%" height="300px" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/1500809_1492267730992915_1049592175577989962_o-1024x682.jpg); background-position: center;">
-                                        </figure>
-                                        <figure>
-                                            <img src="<?php bloginfo('template_directory'); ?>/img/blank.gif"  width="100%" height="300px" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/10646665_663231047125623_553418727478072200_n.jpg); background-position: center;">
-                                        </figure>
-                                        <figure>
-                                            <img src="<?php bloginfo('template_directory'); ?>/img/blank.gif"  width="100%" height="300px" style="background-image: url(http://www.crossfitherzliya.com/wp-content/uploads/2014/09/10497847_638453889603339_6243190989343349154_o.jpg); background-position: center;">
-                                        </figure>
--->
+                                    
                                     </div>
                                         
                                 </section>
@@ -92,9 +82,10 @@
                             </div>
                             
                             <!-- FACEBOOK PLUGIN -->
-                             <div align="left" class="postFooter inner-top-xxs inner-bottom-xxs outer-left-xs ">
+                           <!--  <div align="left" class="postFooter inner-top-xxs inner-bottom-xxs outer-left-xs ">
                                 <iframe name="f1161ee7c" width="100px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/plugins/like.php?action=like&amp;app_id=215200883048&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FZEbdHPQfV3x.js%3Fversion%3D41%23cb%3Df36cd4b4e%26domain%3Dhwzone.co.il%26origin%3Dhttp%253A%252F%252Fhwzone.co.il%252Ff10e7ea514%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fhwzone.co.il%2F%25d7%2594%25d7%2590%25d7%2599%25d7%2599%25d7%25a4%25d7%2595%25d7%259f-6-%25d7%2591%25d7%259e%25d7%2591%25d7%2597%25d7%259f-%25d7%2591%25d7%2599%25d7%25a6%25d7%2595%25d7%25a2%25d7%2599%25d7%259d-%25d7%2596%25d7%259e%25d7%259f-%25d7%25a1%25d7%2595%25d7%259c%25d7%259c%25d7%2594%2F&amp;layout=button_count&amp;locale=he_IL&amp;sdk=joey&amp;share=true&amp;show_faces=false&amp;width=100" style="border: none; visibility: visible; width: 120px; height: 20px;" ></iframe>
-                            </div></div>
+                            </div>-->
+                        </div>
                         
                         <!-- END OF FACEBOOK PLUGIN -->
                         
