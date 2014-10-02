@@ -7,6 +7,7 @@
 ?>
 
 <?php get_header(); ?>
+<!--THIS IS SEARCH.PHP -->
         <?php get_template_part( 'featured', 'bar' ); ?>
 
         <div class="row">

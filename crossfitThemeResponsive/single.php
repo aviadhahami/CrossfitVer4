@@ -6,6 +6,7 @@
  * ============================================================= */
 ?>
 <?php get_header(); ?>
+<!-- THIS IS SINGLE.PHP -->
         <?php get_template_part( 'featured', 'bar' ); ?>
 
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

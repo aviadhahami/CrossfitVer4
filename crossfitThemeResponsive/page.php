@@ -7,6 +7,7 @@
 ?>
 
 <?php get_header(); ?>
+<!--THIS IS PAGE.PHP -->
   <!-- ============================================================= SECTION – BLOG ============================================================= -->
         <section class="content outer-md" style="direction: rtl;">
             <div class="container">
