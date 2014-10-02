@@ -7,8 +7,9 @@
 ?>
 
 <?php get_header(); ?>
-        <?php get_template_part( 'featured', 'bar' ); ?>
->
+    <!-- INDEX.PHP -->
+       <h2>YOHOOO</h2>
+
                     
             <?php get_sidebar( 'main' ); ?>
             

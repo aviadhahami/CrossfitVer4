@@ -1,10 +1,18 @@
 <?php
 /* =============================================================
- * single.php
+ * Template Name: Regular Ppage
  * =============================================================
- * Displays content for a single blog post
+ * Template for placing main content on the right
  * ============================================================= */
 ?>
+<?php
+/* =============================================================
+ * Template Name: wod
+ * =============================================================
+ * Page template used for full width pages
+ * ============================================================= */
+?>
+
 <?php get_header(); ?>
         <?php get_template_part( 'featured', 'bar' ); ?>
 
@@ -39,7 +47,7 @@
                                      <!--and &nbsp;-->
                                      <i class="fa fa-heart"></i>&nbsp;
                                      <div style="display: inline;">
-                                         <a href="#">145 לייקים</a>&nbsp;&nbsp;
+                                         <a href="#">145 לייקי�?</a>&nbsp;&nbsp;
                                      </div>                                                                
                         </h4>
                             </div>
@@ -108,7 +116,7 @@
                         
                         <!-- PREVIOUS WOD -->
                          <h1 id="widget">
-                    אימונים קודמים  
+                    �?ימוני�? קודמי�?  
                     </h1>
                       <div class="recentPost inner-top-xxs-img inner-bottom-xxs-img" style="direction: ltr;">
                             <div class="container-fluid">
@@ -154,7 +162,7 @@
                     
 
                 <?php break; endwhile;?>
-<?php endif; ?>
+                        <? endif; ?>
                     
                 </div><!-- end #main_content -->
             </div><!-- end .col-xs-12 -->
