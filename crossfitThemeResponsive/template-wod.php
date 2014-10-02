@@ -61,7 +61,7 @@
                                     foreach ( $attachments as $attachment ) {
                                        echo '<figure>';
                                         $src = wp_get_attachment_image_src($attachment->ID)[0];
-                                          echo '<img src="' . get_bloginfo('template_directory') . '/img/blank.gif" width="100%" height="300px" style="background-image: url('.$src.'); background-position: center;"> ';
+                                          echo '<img src="' . get_bloginfo('template_directory') . '/img/blank.gif" width="100%" height="300px" style="background-image: url('.$src.'); background-position: center; background-size: cover;"> ';
                                      //  echo wp_get_attachment_image( $attachment->ID, 'full' );
                                        echo '</figure>';
                                       }

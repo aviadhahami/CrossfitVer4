@@ -1,4 +1,30 @@
 $(document).ready(function() {
+/*        $('.postBody').find('li').each(rtlToltrFixer);
+    $('.postBody').find('h1').each(rtlToltrFixer);
+    $('.postBody').find('h2').each(rtlToltrFixer);
+    $('.postBody').find('h3').each(rtlToltrFixer);*/
+      $('.postBody').find('li').each(rtlToltrListFixer);
+    
+    function rtlToltrListFixer() {
+         var containNotLatin = false;
+          var str = $(this).text();
+          for(var i=0;i<str.length;i++) {
+              containNotLatin = containNotLatin || ( str.charCodeAt(0)>127 ); // basic latin end at 0x7F (127) 
+          }
+             console.log(containNotLatin);
+             if(!containNotLatin) {
+                 $(this).children().css('right', '100px');
+                  $(this).children().css('left', '-2.14285714em');
+                 $(this).parent('ul').css('padding-left', '2.14285714em');
+                 
+                  /* ltr injector 
+                  $(this).css('direction', 'ltr').css('text-align', 'right');*/
+             } else {
+                 console.log('aviad eat my shit');
+             }
+    }
+    
+    
         /* li with icons */
         $(document).on('init.slides', function() {
     $('.loading-container').fadeOut(function() {
@@ -118,5 +144,5 @@ else
     
 }*/
     
-    
+       
 });
