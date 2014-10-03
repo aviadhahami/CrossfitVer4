@@ -1,10 +1,11 @@
 <?php
 /* =============================================================
- * Template Name: wod
+ * index.php
  * =============================================================
- * Page template used for full width pages
+ * Default page template for the theme
  * ============================================================= */
 ?>
+
 
 <?php get_header(); ?>
         <?php get_template_part( 'featured', 'bar' ); ?>
@@ -155,7 +156,7 @@
                     
 
                 <?php break; endwhile;?>
-
+<? endif; ?>
                     
                 </div><!-- end #main_content -->
             </div><!-- end .col-xs-12 -->
