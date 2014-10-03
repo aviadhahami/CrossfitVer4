@@ -1,62 +1,33 @@
-$(function() {
-    /*        $('.postBody').find('li').each(rtlToltrFixer);
-    $('.postBody').find('h1').each(rtlToltrFixer);
-    $('.postBody').find('h2').each(rtlToltrFixer);
-    $('.postBody').find('h3').each(rtlToltrFixer);*/
+$(document).ready(function() { 
 
 
+    
+    // icon injector
+    $('.postContent').find('ul').addClass('fa-ul').find('li').prepend('<i class="fa-li fa fa-check-square-o"></i>');
+    $('.widget_archive').find('ul').addClass('fa-ul').find('li').find('a').prepend('<i class="fa-li fa fa-chevron-left"></i>');
+    $('.tag').find('a').prepend('<i class="fa fa-tag"> </i> ');
+
+    //CHANGE LIST DIRECTION
+    //iterate over ul elements and fix them if needed. (doesn't effect fa-li or fa-ul classes.)
+    
+    $(".postBody").find('ul').each(changeListDirection);
+       
     //Change list li bullets according to posts' language
-    var fixList = function changeListDirection() {
-        if ($(".postBody ul").attr("dir") == "ltr") {
-            var val = $(".fa-li").css("right");
-            $(".fa-li").css("right", "auto");
-            $(".fa-li").css("left", val);
-            //fixCounter++;
-        } else if (typeof $(".postBody ul").attr("dir") == "undefined") {
-            //do non
-          //  counter++;
+   function changeListDirection() {
+        if ($(this).attr("dir") == "ltr") {
+            var val = $(this).find("i").css("right");
+            $(this).css('padding-left', '2.14285714em');
+            $(this).find("i").css({right: "auto", left: val});
+        } else if (typeof $(this).attr("dir") == "undefined") {
+            //do nothing
         } else {
-            //counter++;
+            //do nothing
         }
     }
-
-    window.setTimeout(fixList, 0); 
-    /*var fixCounter = 0;
-    window.setTimeout(function() {
-
-        if (fixCounter == 0) {
-            if ( !! $(".fa-li").css("right") != 0) {
-                fixList();
-                console.log("fixed the list");
-            }
-        }
-    }, 1000);*/
 
     //END OF CHANGE LIST DIRECTION
+    //Ori is the rtl ltr king thanks. 
 
-    $('.postBody').find('li').each(rtlToltrListFixer);
-
-    function rtlToltrListFixer() {
-        var containNotLatin = false;
-        var str = $(this).text();
-        for (var i = 0; i < str.length; i++) {
-            containNotLatin = containNotLatin || (str.charCodeAt(0) > 127); // basic latin end at 0x7F (127) 
-        }
-        console.log(containNotLatin);
-        if (!containNotLatin) {
-            $(this).children().css('right', '100px');
-            $(this).children().css('left', '-2.14285714em');
-            $(this).parent('ul').css('padding-left', '2.14285714em');
-
-            /* ltr injector 
-                  $(this).css('direction', 'ltr').css('text-align', 'right');*/
-        } else {
-            console.log('aviad eat my shit');
-        }
-    }
-
-
-    /* li with icons */
     $(document).on('init.slides', function() {
         $('.loading-container').fadeOut(function() {
             $(this).remove();
@@ -89,10 +60,6 @@ $(function() {
     $('#slides').bind('animating.slides', function() {
         $(this).find('img').fadeTo(500, 1).delay(2000);
     });
-
-    $('.postContent').find('ul').addClass('fa-ul').find('li').prepend('<i class="fa-li fa fa-check-square-o"></i>');
-    $('.widget_archive').find('ul').addClass('fa-ul').find('li').find('a').prepend('<i class="fa-li fa fa-chevron-left"></i>');
-    $('.tag').find('a').prepend('<i class="fa fa-tag"> </i> ');
 
     var post = $("#post");
     var recent = $("#recent");
