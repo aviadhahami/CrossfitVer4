@@ -35,7 +35,7 @@
                                      <i class="fa fa-calendar"></i>&nbsp;
                                      <div style="display: inline;"><?php the_time('F j, Y'); ?>&nbsp;&nbsp;</div>       
                                      <!--With &nbsp;-->
-                                     <i class="fa fa-comment"></i>&nbsp;
+                                     <!--<i class="fa fa-comment"></i>&nbsp;
                                      <div style="display: inline;">
                                          <a href="#">9 תגובות</a>&nbsp;&nbsp;
                                      </div>
@@ -43,7 +43,7 @@
                                      <i class="fa fa-heart"></i>&nbsp;
                                      <div style="display: inline;">
                                          <a href="#">145 לייקים</a>&nbsp;&nbsp;
-                                     </div>                                                                
+                                     </div>                       -->
                         </h4>
                             </div>
                             
@@ -109,17 +109,17 @@
                        
                         <!-- END OF TAGS -->
                         
-                        <!-- PREVIOUS WOD -->
-                         <h1 id="widget">
+                       <!-- <!-- PREVIOUS WOD -->
+                   <!--      <h1 id="widget">
                     אימונים קודמים  
                     </h1>
                       <div class="recentPost inner-top-xxs-img inner-bottom-xxs-img" style="direction: ltr;">
                             <div class="container-fluid">
                                 <div class="row-fluid">
-                                    <div class="owl-carousel" id="recent">
+                                    <div class="owl-carousel" id="recent">-->
                                         
                                         <?php
-                                            //$src =bloginfo('template_directory') . '/img/blank.gif';
+/*                                            //$src =bloginfo('template_directory') . '/img/blank.gif';
                                            $args = array( 'numberposts' => '7', 'category' =>  get_cat_ID('wod'), );
                                             $recent_posts = wp_get_recent_posts( $args );
                                             foreach( $recent_posts as $recent ){
@@ -139,7 +139,7 @@
                                                 
                                             
                                             $recent="";}
-                                         ?>
+                                         */?>
                                        
                                         
 
@@ -147,20 +147,32 @@
                                         
                                         
                                         
-                                    </div>
+                             <!--       </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                         
                         <!-- END OF PREVIOUS WOD -->
 	
                     
 
-                <?php break; endwhile;?>
+                <?php  endwhile;?>
 <?php endif; ?>
                     
                 </div><!-- end #main_content -->
             </div><!-- end .col-xs-12 -->
         </div><!-- end .row -->
-
+                 <?php get_sidebar( 'main' ); ?>
 <?php get_footer(); ?>
+
+
+
+
+
+
+
+
+
+
+
+
