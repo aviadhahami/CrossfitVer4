@@ -8,9 +8,10 @@
 
 <?php get_header(); ?>
 <!-- index.php -->
-<?php //get_template_part( 'featured', 'bar' ); ?>
+<?php get_template_part( 'featured', 'bar' ); ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php if (have_posts()) : while (have_posts()) :
+the_post(); ?>
 
 
 <section class="content outer-md">
@@ -39,10 +40,10 @@
                                 <a href="#">9 תגובות</a>&nbsp;&nbsp;
                             </div>
                             <!--and &nbsp;-->
-                          <!--  <i class="fa fa-heart"></i>&nbsp;
-                            <div style="display: inline;">
-                                <a href="#">145 לייקים</a>&nbsp;&nbsp;
-                            </div> -->
+                            <!--  <i class="fa fa-heart"></i>&nbsp;
+                              <div style="display: inline;">
+                                  <a href="#">145 לייקים</a>&nbsp;&nbsp;
+                              </div> -->
                         </h4>
                     </div>
 
@@ -58,14 +59,14 @@
                                     'post_parent' => $post->ID
                                 );
 
-                                $attachments = get_posts( $args );
-                                if ( $attachments ) {
-                                    foreach ( $attachments as $attachment ) {
+                                $attachments = get_posts($args);
+                                if ($attachments) {
+                                    foreach ($attachments as $attachment) {
                                         echo '<figure>';
 
                                         $imageSize = 'full';
-                                        $src = wp_get_attachment_image_src($attachment->ID,$imageSize)[0];
-                                        echo '<img src="' . get_bloginfo('template_directory') . '/img/blank.gif" width="100%" height="300px" style="background-image: url('.$src.'); background-position: center; background-size: cover;"> ';
+                                        $src = wp_get_attachment_image_src($attachment->ID, $imageSize)[0];
+                                        echo '<img src="' . get_bloginfo('template_directory') . '/img/blank.gif" width="100%" height="300px" style="background-image: url(' . $src . '); background-position: center; background-size: cover;"> ';
 
                                         //echo wp_get_attachment_image( $attachment->ID, 'full' );
                                         echo '</figure>';
@@ -79,7 +80,7 @@
                         </section>
                         <?php
 
-                        remove_filter( the_content(), 'remove_images', 100 );
+                        remove_filter(the_content(), 'remove_images', 100);
                         //the_content();
                         ?>
                     </div>
@@ -87,7 +88,9 @@
                     <!-- FACEBOOK PLUGIN -->
                     <div align="left" class="postFooter inner-top-xxs inner-bottom-xxs outer-left-xs ">
 
-                        <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { ADDTOANY_SHARE_SAVE_KIT(); } ?>
+                        <?php if (function_exists('ADDTOANY_SHARE_SAVE_KIT')) {
+                            ADDTOANY_SHARE_SAVE_KIT();
+                        } ?>
 
                     </div>
                 </div>
@@ -102,7 +105,7 @@
                             <!--       fa-inverse -->
 
                             <p class="tag">
-                                <? the_tags( 'תגיות:&nbsp;&nbsp;&nbsp;&nbsp;', ' ', ' ' ); ?>     </div>
+                            <? the_tags('תגיות:&nbsp;&nbsp;&nbsp;&nbsp;', ' ', ' '); ?></div>
                     </div>
                 </div>
 
@@ -138,7 +141,8 @@
 
 
                                                             $recent="";}
-                                                         */?>
+                                                         */
+                ?>
 
 
 
@@ -155,12 +159,15 @@
 
 
 
-                <?php  endwhile;?>
+                <?php endwhile; ?>
                 <?php endif; ?>
 
-            </div><!-- end #main_content -->
-        </div><!-- end .col-xs-12 -->
-    </div><!-- end .row -->
+            </div>
+            <!-- end #main_content -->
+        </div>
+        <!-- end .col-xs-12 -->
+    </div>
+    <!-- end .row -->
     <?php //get_sidebar( 'main' ); ?>
     <?php get_footer(); ?>
 
