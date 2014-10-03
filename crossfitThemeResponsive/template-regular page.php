@@ -1,15 +1,8 @@
 <?php
 /* =============================================================
- * Template Name: Regular Ppage
+ * Template Name: Regular Page
  * =============================================================
  * Template for placing main content on the right
- * ============================================================= */
-?>
-<?php
-/* =============================================================
- * Template Name: wod
- * =============================================================
- * Page template used for full width pages
  * ============================================================= */
 ?>
 
@@ -40,15 +33,18 @@
                                      <i class="fa fa-calendar"></i>&nbsp;
                                      <div style="display: inline;"><?php the_time('F j, Y'); ?>&nbsp;&nbsp;</div>       
                                      <!--With &nbsp;-->
+                                     <!--
                                      <i class="fa fa-comment"></i>&nbsp;
                                      <div style="display: inline;">
                                          <a href="#">9 תגובות</a>&nbsp;&nbsp;
                                      </div>
+                                     -->
                                      <!--and &nbsp;-->
+                                     <!--
                                      <i class="fa fa-heart"></i>&nbsp;
                                      <div style="display: inline;">
-                                         <a href="#">145 לייקי�?</a>&nbsp;&nbsp;
-                                     </div>                                                                
+                                         <a href="#">145 לייקים</a>&nbsp;&nbsp;
+                                     </div>      -->
                         </h4>
                             </div>
                             
@@ -116,7 +112,7 @@
                         
                         <!-- PREVIOUS WOD -->
                          <h1 id="widget">
-                    �?ימוני�? קודמי�?  
+                   אימונים קודמים
                     </h1>
                       <div class="recentPost inner-top-xxs-img inner-bottom-xxs-img" style="direction: ltr;">
                             <div class="container-fluid">
