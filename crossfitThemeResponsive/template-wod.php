@@ -160,5 +160,4 @@
                 </div><!-- end #main_content -->
             </div><!-- end .col-xs-12 -->
         </div><!-- end .row -->
-
 <?php get_footer(); ?>

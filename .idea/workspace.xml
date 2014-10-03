@@ -23,15 +23,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="6" selection-start="308" selection-end="308" vertical-scroll-proportion="0.32136106" vertical-offset="0" max-vertical-offset="3230">
+            <state line="176" column="0" selection-start="7446" selection-end="7446" vertical-scroll-proportion="-7.882353" vertical-offset="2590" max-vertical-offset="3094">
               <folding>
                 <element signature="e#6#255#0" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template-wod.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/template-wod.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="161" column="31" selection-start="8514" selection-end="8514" vertical-scroll-proportion="0.765748" vertical-offset="2280" max-vertical-offset="2788">
+              <folding>
+                <marker date="1412355527110" expanded="true" signature="6589:6723" placeholder="..." />
+                <marker date="1412355527110" expanded="true" signature="6675:6723" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -99,10 +111,29 @@
             <state line="9" column="30" selection-start="342" selection-end="342" vertical-scroll-proportion="85.65385" vertical-offset="2380" max-vertical-offset="2958">
               <folding>
                 <element signature="e#6#284#0" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+                <marker date="1412348874572" expanded="true" signature="826:4975" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="879:2443" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="927:1007" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="1045:2408" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="1295:1311" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="1537:1553" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="1706:2007" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="2107:2376" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="2540:4526" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="2662:2677" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="2678:4249" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="2751:4165" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="4721:4944" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="5175:5600" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="5233:5569" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="5289:5534" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="5405:5528" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="5782:5842" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="5936:5951" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="5952:8329" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="6010:8298" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="6066:8263" placeholder="..." />
+                <marker date="1412348874572" expanded="true" signature="6141:8224" placeholder="..." />
                 <marker date="1412348874572" expanded="true" signature="6693:6827" placeholder="..." />
                 <marker date="1412348874572" expanded="true" signature="6779:6827" placeholder="..." />
               </folding>
@@ -167,6 +198,7 @@
         <option value="$PROJECT_DIR$/crossfitThemeResponsive/template-regular page.php" />
         <option value="$PROJECT_DIR$/crossfitThemeResponsive/page.php" />
         <option value="$PROJECT_DIR$/crossfitThemeResponsive/index.php" />
+        <option value="$PROJECT_DIR$/crossfitThemeResponsive/template-wod.php" />
       </list>
     </option>
   </component>
@@ -318,10 +350,29 @@
         <state line="9" column="30" selection-start="342" selection-end="342" vertical-scroll-proportion="85.65385" vertical-offset="2380" max-vertical-offset="2958">
           <folding>
             <element signature="e#6#284#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+            <marker date="1412348874572" expanded="true" signature="826:4975" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="879:2443" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="927:1007" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="1045:2408" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="1295:1311" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="1537:1553" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="1706:2007" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="2107:2376" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="2540:4526" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="2662:2677" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="2678:4249" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="2751:4165" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="4721:4944" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="5175:5600" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="5233:5569" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="5289:5534" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="5405:5528" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="5782:5842" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="5936:5951" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="5952:8329" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="6010:8298" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="6066:8263" placeholder="..." />
+            <marker date="1412348874572" expanded="true" signature="6141:8224" placeholder="..." />
             <marker date="1412348874572" expanded="true" signature="6693:6827" placeholder="..." />
             <marker date="1412348874572" expanded="true" signature="6779:6827" placeholder="..." />
           </folding>
@@ -437,12 +488,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="6" selection-start="308" selection-end="308" vertical-scroll-proportion="0.32136106" vertical-offset="0" max-vertical-offset="3230">
+        <state line="176" column="0" selection-start="7446" selection-end="7446" vertical-scroll-proportion="-7.882353" vertical-offset="2590" max-vertical-offset="3094">
           <folding>
             <element signature="e#6#255#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/template-wod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="161" column="31" selection-start="8514" selection-end="8514" vertical-scroll-proportion="0.765748" vertical-offset="2280" max-vertical-offset="2788">
+          <folding>
+            <marker date="1412355527110" expanded="true" signature="6589:6723" placeholder="..." />
+            <marker date="1412355527110" expanded="true" signature="6675:6723" placeholder="..." />
           </folding>
         </state>
       </provider>
