@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
            $(".signup").fancybox({
 		closeBtn		: false,
 		helpers		: {
@@ -11,6 +12,14 @@ $(document).ready(function () {
             }
         }
     }
+ });
+
+    $('#signup').on('click', function () {
+        submitWork();
+        //$.colorbox({href: "/index.html"});
+    });
+    function submitWork() {
+
 	});
     
     
@@ -244,6 +253,7 @@ $(document).ready(function () {
                 .attr("value", "wod5")
                 .text("20:30 RX club"));
     }
+>>>>>>> fancybox
 
     function appendFri() {
 
