@@ -24,6 +24,7 @@
   </head> 
   <body <?php body_class( 'container' ); ?>>
   <div id="masthead">
+      <!-- AVIADDD-- >
           <span id="site-title" class="lead text-center"><?php echo get_bloginfo ( 'title' ); ?></span> 
           <span id="site-tagline" class="muted text-center"><?php echo get_bloginfo ( 'description' ); ?></span> 
 		  <?php wp_nav_menu( array( 'theme_location' => 'head-nav', 'container' => 'nav', 'container_class' => 'pull-right', 'menu_class' => 'nav nav-pills' ) ); ?>
