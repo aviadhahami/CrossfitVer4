@@ -2,7 +2,7 @@
 $(document).ready(function () {
        // FANCYBOX
     
-           $(".signup").fancybox({
+/*           $(".signup").fancybox({
   closeBtn  : false,
   helpers  : {
    title : { type : 'inside' },
@@ -14,11 +14,11 @@ $(document).ready(function () {
             }
         }
     }
- });
+ });*/
     
     $('#signup').on('click', function () {
         submitWork();
-        $.colorbox({href: "/index.html"});
+        //$.colorbox({href: "/index.html"});
     });
     function submitWork() {
 
