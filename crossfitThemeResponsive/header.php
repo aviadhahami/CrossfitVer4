@@ -13,6 +13,11 @@
         <title>
             <?php wp_title( ''); ?>
         </title>
+        <!--FOLLOWING LINE CHANGES THE BROWSER'S TAB ICON -->
+        <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/img/BrowserLogo.ico">
+        <!-- <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" /> -->
+
+
         <!--<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />-->
        <!--  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>-->
         <?php //wp_enqueue_script("jquery"); ?>

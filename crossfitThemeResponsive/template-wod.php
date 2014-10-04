@@ -82,18 +82,13 @@ while (have_posts()) : the_post(); ?>
             remove_filter(the_content(), 'remove_images', 100);
             //the_content();
             ?>
-        </div>
+
         <hr style="border: 1px dashed #e8ebed; margin-top: 38px;">
         <div class="input-list style-4" style="<!--border-top: 1px dashed #e8ebed;-->">
+    <h3>הרשמה לאימונים</h3>
+            <input type="text" id="name" placeholder="שם:" >
 
-            <input type="text" placeholder="שם:">
-
-            <select>
-                <option>WOD - 16:00</option>
-                <option>WOD - 17:00</option>
-                <option>WOD - 06:00</option>
-                <option>KOBILITI</option>
-                <option>DEATH</option>
+            <select id="poll">
             </select>
 
             <div class="row buttonrow">
@@ -116,6 +111,7 @@ while (have_posts()) : the_post(); ?>
             } ?>
 
         </div>
+    </div>
     </div>
 
     <!-- END OF FACEBOOK PLUGIN -->
@@ -151,9 +147,9 @@ while (have_posts()) : the_post(); ?>
                         echo ' <div class="grid">
                                                         <figure class="effect-bubba">
                                                ';
-                        echo '<img src="' . get_bloginfo('template_directory') . '/img/blank.gif" class="recentImg" style="background-image: url(' . catch_that_image($recent) . ' );">';
+                        echo ' <a href="' . get_permalink($recent["ID"]) . '"><img src="' . get_bloginfo('template_directory') . '/img/blank.gif" class="recentImg" style="background-image: url(' . catch_that_image($recent) . ' );">';
                         echo ' <figcaption><div class="substringer">
-                                                <a href="' . get_permalink($recent["ID"]) . '">
+
                                                     <h2><div class="substringer">' . $recent["post_title"] . '</div></h2>
                                                     <p>' . mysql2date('Y / m / j', $recent["post_date"]) . '</p>
                                                     </a> 	

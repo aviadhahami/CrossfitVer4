@@ -8,10 +8,9 @@
 
 <?php get_header(); ?>
 <!-- index.php -->
-<?php get_template_part( 'featured', 'bar' ); ?>
+<?php get_template_part('featured', 'bar'); ?>
 
-<?php if (have_posts()) : while (have_posts()) :
-the_post(); ?>
+
 
 
 <section class="content outer-md">
@@ -21,6 +20,8 @@ the_post(); ?>
 
             <!-- /.right col -->
             <div class="col-md-9 col-md-push-3">
+                <?php if (have_posts()) : while (have_posts()) :
+                    the_post(); ?>
                 <div class="postContent inner-padding-left-sm inner-padding-right-sm inner-bottom-xxs">
                     <div class="postHeader">
                         <h1 id="title">
@@ -111,64 +112,21 @@ the_post(); ?>
 
                 <!-- END OF TAGS -->
 
-                <!-- <!-- PREVIOUS WOD -->
-                <!--      <h1 id="widget">
-                 אימונים קודמים
-                 </h1>
-                   <div class="recentPost inner-top-xxs-img inner-bottom-xxs-img" style="direction: ltr;">
-                         <div class="container-fluid">
-                             <div class="row-fluid">
-                                 <div class="owl-carousel" id="recent">-->
-
-                <?php
-                /*                                            //$src =bloginfo('template_directory') . '/img/blank.gif';
-                                                           $args = array( 'numberposts' => '7', 'category' =>  get_cat_ID('wod'), );
-                                                            $recent_posts = wp_get_recent_posts( $args );
-                                                            foreach( $recent_posts as $recent ){
-                                                                echo ' <div class="grid">
-                                                                        <figure class="effect-bubba">
-                                                               ';
-                                                               echo '<img src="'  . get_bloginfo('template_directory') . '/img/blank.gif" class="recentImg" style="background-image: url(' . catch_that_image($recent) . ' );">';
-                                                               echo' <figcaption><div class="substringer">
-                                                                <a href="' . get_permalink($recent["ID"]) . '">
-                                                                    <h2><div class="substringer">' . $recent["post_title"] . '</div></h2>
-                                                                    <p>' .  mysql2date('Y / m / j', $recent["post_date"]) . '</p>
-                                                                    </a>
-                                                                </div></figcaption>
-
-                                                            </figure>
-                                                        </div>';
-
-
-                                                            $recent="";}
-                                                         */
-                ?>
-
-
-
-
-
-
-
-                <!--       </div>
-                   </div>
-               </div>
-           </div>-->
-
-                <!-- END OF PREVIOUS WOD -->
-
-
 
                 <?php endwhile; ?>
                 <?php endif; ?>
 
             </div>
             <!-- end #main_content -->
+            <?php get_sidebar('main'); ?>
         </div>
+
         <!-- end .col-xs-12 -->
+        
     </div>
+
     <!-- end .row -->
-    <?php //get_sidebar( 'main' ); ?>
+
     <?php get_footer(); ?>
 
 
