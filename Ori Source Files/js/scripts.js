@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    $('#signup').on('click', function() {
+        $.colorbox({href:"/index.html"});
+    })
+    
         /* li with icons */
         $(document).on('init.slides', function() {
     $('.loading-container').fadeOut(function() {

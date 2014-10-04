@@ -598,6 +598,7 @@
     background-size: cover;
     margin-right: -1px;
     opacity: 0.5;
+    min-width: 45px;
 }
 
 .partButtonText {
@@ -663,7 +664,7 @@
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 490px) {
      .style-4 input[type="text"], .style-4 select{
        font-size: 1em;                 
 } 
@@ -675,6 +676,16 @@
     .partButton {
         height: 45px;
     }
+}
+
+@media (max-width: 420px) {
+       .style-4 button {
+          width: calc( 96.5% - 8px);
+       }
+    
+        .partButton {
+            margin-right: calc(-41px - -80.5%);
+        }
 }
 .style-4 select:focus {
     opacity: 0.5;
