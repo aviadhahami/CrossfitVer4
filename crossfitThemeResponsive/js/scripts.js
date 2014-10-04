@@ -1,5 +1,21 @@
 
 $(document).ready(function () {
+       // FANCYBOX
+    
+           $(".signup").fancybox({
+  closeBtn  : false,
+  helpers  : {
+   title : { type : 'inside' },
+   buttons : {},
+        overlay : {
+            locked: 'false',
+            css : {
+                'background' : 'rgba(67, 67, 67, 0.85)'
+            }
+        }
+    }
+ });
+    
     $('#signup').on('click', function () {
         submitWork();
         $.colorbox({href: "/index.html"});
