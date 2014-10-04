@@ -1,19 +1,8 @@
 <<<<<<< HEAD
 $(document).ready(function() {
-    
-        $(".signup").fancybox({
-		closeBtn		: false,
-		helpers		: {
-			title	: { type : 'inside' },
-			buttons	: {},
-        overlay : {
-            locked: 'false',
-            css : {
-                'background' : 'rgba(67, 67, 67, 0.85)'
-            }
-        }
-    }
-	});
+    $('#signup').on('click', function() {
+        $.colorbox({href:"/index.html"});
+    })
     
         /* li with icons */
         $(document).on('init.slides', function() {
