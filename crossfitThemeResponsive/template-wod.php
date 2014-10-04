@@ -94,8 +94,8 @@ while (have_posts()) : the_post(); ?>
             <div class="row buttonrow">
 
                 <div class="col-xs-2 buttoncell">
-                    <div class="partButton">
-                        <div class="partButtonText">מששתפים</div>
+                    <div class="partButton" style="background-image:url(<?php bloginfo('template_url'); ?>/img/expend.png);">
+                       <!-- <div class="partButtonText">מששתפים</div>-->
                     </div>
                 </div>
                 <div class="col-xs-10">
