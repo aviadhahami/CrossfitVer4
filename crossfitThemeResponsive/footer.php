@@ -89,6 +89,7 @@
 <script src="<?php bloginfo('template_directory'); ?>/js/social-float.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery.fancybox.js"></script>
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/jquery.fancybox.css">
+<script src="<?php bloginfo('template_directory'); ?>/js/scripts.js"></script>
 
 
 </body>
