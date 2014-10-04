@@ -1,4 +1,28 @@
 $(document).ready(function () {
+    function setCookie(key, value) {
+        var expires = new Date();
+        expires.setTime(expires.getTime() + (1 * 24 * 60 * 60 * 1000));
+        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+    }
+
+    function getCookie(key) {
+        var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+        return keyValue ? keyValue[2] : null;
+    }
+    if ($("#name").length > 0) {
+        //decelerations...
+
+        //GO GO CODE !
+        var cookieVal = getCookie("partName");
+        if (!cookieVal){
+            //COOKIE DOESNT EXIST
+            //WE WILL WAIT FOR SUBMIT
+
+        }else{
+            //COOKIE EXISTS
+           $('#name').val(cookieVal);
+        }
+    }
 
     //POLL DATA INJETION
     //insert the daily sched
@@ -254,11 +278,6 @@ $(document).ready(function () {
 //DONE WITH THE OPTIONS INJECTIONS
 
 
-
-
-
-
-
     $('#signup').on('click', function () {
         submitWork();
         $.colorbox({href: "/index.html"});
@@ -289,7 +308,8 @@ $(document).ready(function () {
                 datatype: "html",
                 success: function (result) {
                     console.log(result);
-
+                    //set cookie for the part's name
+                    setCookie("partName",$('#name').val());
 
                 },
                 error: function (result) {
@@ -442,8 +462,6 @@ $(document).ready(function () {
      $(".navbar-collapse").css("overflow","hidden");
 
      }*/
-
-
 
 
 });
