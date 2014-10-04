@@ -95,11 +95,11 @@ while (have_posts()) : the_post(); ?>
 
                 <div class="col-xs-2 buttoncell">
                     <div class="partButton">
-                        <div class="partButtonText">מששתפים</div>
+                        <a class="signup" data-fancybox-type="iframe" href="hi.html"><div class="partButtonText">מששתפים</div></a>
                     </div>
                 </div>
                 <div class="col-xs-10">
-                    <button id="signup" style="margin-bottom: 15px;">הרשמה לאימון</button>
+                    <a class="signup" data-fancybox-type="iframe" href="hi.html"><button id="signup" style="margin-bottom: 15px;">הרשמה לאימון</button></a>
                 </div>
             </div>
         </div>

@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-$(document).ready(function() {
-    $('#signup').on('click', function() {
-        $.colorbox({href:"/index.html"});
-    })
-    
-        /* li with icons */
-        $(document).on('init.slides', function() {
-    $('.loading-container').fadeOut(function() {
-      $(this).remove();
-=======
+
 $(document).ready(function () {
     $('#signup').on('click', function () {
         submitWork();
         $.colorbox({href: "/index.html"});
->>>>>>> origin/master
     });
     function submitWork() {
 
