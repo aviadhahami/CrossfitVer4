@@ -157,6 +157,7 @@
 <?php endif; ?>
                     
                 </div><!-- end #main_content -->
+                 <?php get_sidebar('main'); ?>
             </div><!-- end .col-xs-12 -->
         </div><!-- end .row -->
 
