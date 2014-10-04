@@ -1,7 +1,18 @@
 $(document).ready(function() {
-    $('#signup').on('click', function() {
-        $.colorbox({href:"/index.html"});
-    })
+    
+        $(".signup").fancybox({
+		closeBtn		: false,
+		helpers		: {
+			title	: { type : 'inside' },
+			buttons	: {},
+        overlay : {
+            locked: 'false',
+            css : {
+                'background' : 'rgba(67, 67, 67, 0.85)'
+            }
+        }
+    }
+	});
     
         /* li with icons */
         $(document).on('init.slides', function() {

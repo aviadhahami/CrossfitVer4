@@ -1,6 +1,21 @@
 $(document).ready(function() { 
 
-
+    // FANCYBOX
+    
+           $(".signup").fancybox({
+		closeBtn		: false,
+		helpers		: {
+			title	: { type : 'inside' },
+			buttons	: {},
+        overlay : {
+            locked: 'false',
+            css : {
+                'background' : 'rgba(67, 67, 67, 0.85)'
+            }
+        }
+    }
+	});
+    
     
     // icon injector
     $('.postContent').find('ul').addClass('fa-ul').find('li').prepend('<i class="fa-li fa fa-check-square-o"></i>');
