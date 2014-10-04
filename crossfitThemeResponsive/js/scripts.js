@@ -1,7 +1,7 @@
 $(document).ready(function () {
+
     //POLL DATA INJETION
     //insert the daily sched
-    alert(2);
     var d = new Date();
     var day = d.getDay() + 1;
     insertSelectOptions(day);
@@ -260,12 +260,10 @@ $(document).ready(function () {
 
 
     $('#signup').on('click', function () {
-        alert("in sigunp");
         submitWork();
         $.colorbox({href: "/index.html"});
     });
     function submitWork() {
-        alert("submit");
         //this part sends to the server the chosen option from the SELECT
         var selection = $('#poll').val();
         var rawSelect = $("#poll option:selected").text();
@@ -291,19 +289,7 @@ $(document).ready(function () {
                 datatype: "html",
                 success: function (result) {
                     console.log(result);
-                    //var element = document.getElementById("signButton").parentNode;
-                    var element = document.getElementById("response");
-                    var para = document.createElement("p");
-                    para.setAttribute("class", "success");
-                    para.setAttribute("style", "border: 1px solid black;");
-                    var node = document.createTextNode("Thank you " + name + "! You've signed up for " + rawSelect);
-                    para.appendChild(node);
-                    element.appendChild(para);
-                    //document.getElementById("success").fadeOut("slow").delay(2000);
-                    //$('p', element)[0].fadeOut("slow").delay(2000);
-                    setTimeout(function () {
-                        $(".success").fadeOut("slow");
-                    }, 10000);
+
 
                 },
                 error: function (result) {

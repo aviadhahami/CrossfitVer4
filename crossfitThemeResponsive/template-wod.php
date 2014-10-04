@@ -85,7 +85,7 @@ while (have_posts()) : the_post(); ?>
 
         <hr style="border: 1px dashed #e8ebed; margin-top: 38px;">
         <div class="input-list style-4" style="<!--border-top: 1px dashed #e8ebed;-->">
-
+    <h3>הרשמה לאימונים</h3>
             <input type="text" id="name" placeholder="שם:" >
 
             <select id="poll">
