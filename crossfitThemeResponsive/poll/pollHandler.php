@@ -8,7 +8,8 @@ if ($selection == "" || $clientName == "" || $rawSelect ==""){
     echo("You shouldn't address this page directly. GTFO.");
     exit();
 }
-date_default_timezone_set("Israel");
+date_default_timezone_set("Asia/Kolkata");
+//UTC + 06:00 (KOLKATA) TO FIT THE SIGNUP FOR 20:00 ISRAEL TIME
 $dateNumber = date("dmy");
 
 if (file_exists("pollData/" . $dateNumber . "-Wod.xml")) {
