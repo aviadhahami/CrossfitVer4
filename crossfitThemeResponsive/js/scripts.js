@@ -1,44 +1,69 @@
-$(document).ready(function() { 
 
+$(document).ready(function () {
+    $('#signup').on('click', function () {
+        submitWork();
+        $.colorbox({href: "/index.html"});
+    });
+    function submitWork() {
 
-    
-    // icon injector
-    $('.postContent').find('ul').addClass('fa-ul').find('li').prepend('<i class="fa-li fa fa-check-square-o"></i>');
-    $('.widget_archive').find('ul').addClass('fa-ul').find('li').find('a').prepend('<i class="fa-li fa fa-chevron-left"></i>');
-    $('.tag').find('a').prepend('<i class="fa fa-tag"> </i> ');
-
-    //CHANGE LIST DIRECTION
-    //iterate over ul elements and fix them if needed. (doesn't effect fa-li or fa-ul classes.)
-    
-    $(".postBody").find('ul').each(changeListDirection);
-       
-    //Change list li bullets according to posts' language
-   function changeListDirection() {
-        if ($(this).attr("dir") == "ltr") {
-            var val = $(this).find("i").css("right");
-            $(this).css('padding-left', '2.14285714em');
-            $(this).find("i").css({right: "auto", left: val});
-        } else if (typeof $(this).attr("dir") == "undefined") {
-            //do nothing
+        //this part sends to the server the chosen option from the SELECT
+        var selection = $('#poll').val();
+        var rawSelect = $("#poll option:selected").text();
+        var name = $('#name').val();
+        if (name == "" || name == " ") {
+            //no name given
+            console.log("no input");
+            $('#noInput').fadeIn("slow");
+            setTimeout(function () {
+                $('#noInput').fadeOut("slow");
+            }, 10000);
         } else {
-            //do nothing
+
+            $.ajax({
+                //URL MIGHT NEED TO BE CHANGED !
+                type: "GET",
+                url: "../poll/pollHandler.php",
+                data: {
+                    selection: selection,
+                    name: name,
+                    rawSelect: rawSelect
+                },
+                datatype: "html",
+                success: function (result) {
+                    console.log(result);
+                    //var element = document.getElementById("signButton").parentNode;
+                    var element = document.getElementById("response");
+                    var para = document.createElement("p");
+                    para.setAttribute("class", "success");
+                    para.setAttribute("style", "border: 1px solid black;");
+                    var node = document.createTextNode("Thank you " + name + "! You've signed up for " + rawSelect);
+                    para.appendChild(node);
+                    element.appendChild(para);
+                    //document.getElementById("success").fadeOut("slow").delay(2000);
+                    //$('p', element)[0].fadeOut("slow").delay(2000);
+                    setTimeout(function () {
+                        $(".success").fadeOut("slow");
+                    }, 10000);
+
+                },
+                error: function (result) {
+                    alert("something went wrong, please try again later.");
+                    console.error(result);
+                }
+
+
+            });
         }
+
     }
 
-    //END OF CHANGE LIST DIRECTION
-    //Ori is the rtl ltr king thanks. 
-
-    $(document).on('init.slides', function() {
-        $('.loading-container').fadeOut(function() {
+    /* li with icons */
+    $(document).on('init.slides', function () {
+        $('.loading-container').fadeOut(function () {
             $(this).remove();
         });
     });
 
-    // REQUIRED FOR DROPDOWN HOVER for mobile and PC on POSTS PAGES
-    $('.dropdown-toggle').dropdownHover();
-
-    // REQUIRED FOR DROPDOWN HOVER for mobile on MAIN PAGE.
-    $('.dropdown-toggle').dropdown();
 
     $('#slides').superslides({
         slide_easing: 'easeInOutCubic',
@@ -49,7 +74,7 @@ $(document).ready(function() {
         scrollable: true
     });
 
-    $('#slides').bind('animated.slides', function() {
+    $('#slides').bind('animated.slides', function () {
 
         $(this).find('img').fadeTo(1000, 0.5, 'easeInOutQuad').delay(2000);
 
@@ -57,9 +82,12 @@ $(document).ready(function() {
         console.log('EFFECT HAPPENING - ANIMATION FINISHED SHOULD START ANIMATE');
     });
 
-    $('#slides').bind('animating.slides', function() {
+    $('#slides').bind('animating.slides', function () {
         $(this).find('img').fadeTo(500, 1).delay(2000);
     });
+
+    $('.postContent').find('ul').addClass('fa-ul').find('li').prepend('<i class="fa-li fa fa-check-square-o"></i>');
+    $('.widget_archive').find('ul').addClass('fa-ul').find('li').find('a').prepend('<i class="fa-li fa fa-chevron-left"></i>');
 
     var post = $("#post");
     var recent = $("#recent");
@@ -97,7 +125,7 @@ $(document).ready(function() {
         }
     });
 
-    recent.on('mousewheel', '.owl-stage', function(e) {
+    recent.on('mousewheel', '.owl-stage', function (e) {
         if (e.deltaY > 0) {
             owl.trigger('next.owl');
         } else {
@@ -107,41 +135,77 @@ $(document).ready(function() {
     });
 
 
+    /*var posts = $('#post');
+     posts.owlCarousel({
+     loop:true,
+     nav:false,
+     autoplay:true,
+     animateOut: 'fadeOut',
+     mouseDrag:false,
+     touchDrag:false,
+     pullDrag:false,
+     autoplayTimeout:3000,
+     margin:10,
+     items:1
+     });
+
+     var recent = $('#recent');
+     recent.owlCarousel({
+     loop:true,
+     nav:true;
+     margin:10,
+     items:3
+     });*/
+
+
     var hammer = new Hammer(document.getElementById("slides"))
 
-    hammer.on('swipeleft', function(ev) {
+    hammer.on('swipeleft', function (ev) {
         $('#slides').superslides('animate', 'next');
     });
 
-    hammer.on('swiperight', function(ev) {
+    hammer.on('swiperight', function (ev) {
         $('#slides').superslides('animate', 'prev');
     });
 
 
+    $('.navbar-collapse').mousewheel(function (event) {
+        var scrollTop = this.scrollTop;
+        this.scrollTop = (scrollTop + ((event.deltaY * event.deltaFactor) * -1));
+        console.log(event.deltaY, event.deltaFactor, event.originalEvent.deltaMode, event.originalEvent.wheelDelta);
+    });
 
-    /*    $('.navbar-collapse').mousewheel(function(event) {
-          var scrollTop = this.scrollTop;
-          this.scrollTop = (scrollTop + ((event.deltaY * event.deltaFactor) * -1));
-          console.log(event.deltaY, event.deltaFactor, event.originalEvent.deltaMode, event.originalEvent.wheelDelta);
-        });
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        console.log('You are using a mobile device!');
+        $(".navbar-collapse").css("overflow", "auto");
+    }
 
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-          console.log('You are using a mobile device!');
-      $(".navbar-collapse").css("overflow","auto");
-}
-      
-else
-{
-   console.log('You are not using a mobile device!');
+    else {
+        console.log('You are not using a mobile device!');
 
-    document.ontouchmove = function(e) {
-    e.preventDefault();
-  };
+        /*document.ontouchmove = function(e) {
+         e.preventDefault();
+         };*/
 
-    $(".navbar-collapse").css("overflow","hidden");
+        $(".navbar-collapse").css("overflow", "hidden");
 
-}*/
+    }
 
+    // TAGS HOVER EFFECT // 
+    /*
+     $(".tag *").on("mouseover", function(){
+     $(this).animate({
+
+     width: "70%",
+     opacity: 0.4,
+     marginLeft: "0.6in",
+     fontSize: "3em",
+     borderWidth: "10px"
+     }, 1500 );
+     console.log('SOULD');
+     }).on("mouseleave", function(){
+     $(this).animate({color:'#fff'},'slow');
+     });*/
 
 
 });
