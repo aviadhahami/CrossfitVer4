@@ -9,6 +9,6 @@
  
 ?>
 
-<div class="col-md-4 widget-area sidebar" role="complementary">
+<aside class="col-md-3 col-md-pull-9">
     <?php dynamic_sidebar( 'sidebar-1' ); ?>
-</div><!-- end .col-md-4 .widget-area .sidebar -->
+    </aside>

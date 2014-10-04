@@ -113,7 +113,7 @@ add_filter( 'the_content', 'remove_images', 100 );
         $output .='<figure>';
          $output.= '<img src="' . get_bloginfo('template_directory') . '/img/blank.gif" width="100%" height="300px" style="background-image: url('. esc_url( $img[0] ).'); background-position: center; background-size: cover;"> ';
 
-       
+
   $output .='</figure>';
     endforeach;
 

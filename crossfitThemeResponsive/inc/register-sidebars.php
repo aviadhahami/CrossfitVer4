@@ -15,10 +15,10 @@ function response_widgets_init() {
         'name'          => 'Main Sidebar',
         'id'            => 'sidebar-1',
         'description'   => 'Widgets placed in this area will appear on all posts and pages with a sidebar.',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</aside><hr class="hr-row-divider">',
-        'before_title'  => '<h3 class="widget-title h4">',
-        'after_title'   => '</h3>'
+        'before_widget' => '<div class="sidebar widget>"',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="widget-title h4">',
+        'after_title'   => '</h4>'
     ) );
 	
     register_sidebar( array(
@@ -103,6 +103,15 @@ function response_widgets_init() {
         'name'          => 'Post: After Post',
         'id'            => 'sidebar-10',
         'description'   => 'Widgets added here will display after post (directly after the_content). Use if for a newsletter sign-up form or other text advert..',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title h5">',
+        'after_title'   => '</h3>'
+    ) );
+    register_sidebar( array(
+        'name'          => 'Crossfit: Sign up at the left side',
+        'id'            => 'signUp',
+        'description'   => 'Some sign up data will come here...im so high fuk',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
         'before_title'  => '<h3 class="widget-title h5">',
