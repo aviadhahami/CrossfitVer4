@@ -571,6 +571,138 @@
 
 }*/
 
+.postImg {
+    height: inherit;
+}
+
+.style-4 input[type="text"], .style-4 select{
+  padding: 10px;
+    width: 50%;
+  color: #c9c9c9;
+  font-size: 1.5em;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: all 0.3s;
+}
+.style-4 input[type="text"]:focus {
+    color: #969696;
+       outline: none; 
+   border-bottom: solid 2px #969696;
+   
+}
+.partButton {
+    border: 3px solid black;
+    height: 65px; 
+    width: 65px;
+    background: url(/img/expend.png) center no-repeat;
+    background-size: cover;
+    margin-right: -1px;
+    opacity: 0.5;
+}
+
+.partButtonText {
+    opacity: 0;
+}
+
+.style-4 button {
+    width: 100%;
+    height: 65px;
+    background-color: #3498db;
+    display: block;
+    color: white;
+    font-size: 1.4em;
+    font-weight: 600;
+        white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: none;
+    
+        
+}
+
+.buttonrow {
+    width: 50%;
+    margin-top: 1em;
+}
+
+@media (max-width: 1200px) {
+      .buttonrow {
+    width: calc(50% - 15px);
+      }
+}
+@media (max-width: 991px) {
+   .style-4 input[type="text"], .style-4 select{
+       width: 100%;     
+}
+    
+    .style-4 button {
+        width: 100%;
+    }
+    
+    .partButton {
+        /*background: none;*/
+        width: 100%;
+    }
+    
+    .buttoncell {
+        padding-right: 0px;
+    }
+    
+    .buttonrow {
+       width: calc(100% + 31px);
+        
+    }
+    .partButtonText {
+       /* opacity: 0.5;*/
+    }
+}
+
+@media (max-width: 450px) {
+     .style-4 input[type="text"], .style-4 select{
+       font-size: 1em;                 
+} 
+    .style-4 button {
+        font-size: 1em;
+        height: 45px;
+    }
+    
+    .partButton {
+        height: 45px;
+    }
+}
+.style-4 select:focus {
+    opacity: 0.5;
+     outline: none;    
+    color: #969696;
+}
+
+.style-4 select option {
+    color: #969696;
+}
+.style-4 select {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: black;
+    border-bottom: solid 2px #000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 0.25;
+     background: transparent url("https://cdn0.iconfinder.com/data/icons/arrows-android-l-lollipop-icon-pack/24/expand2-24.png") no-repeat left center;
+}
+
+h3#signup {
+    color: #6d6d6d;
+    font-weight: 400;
+    font-size: 1.8em;
+}
+
 .col-custom-small {} 
 
 .col-custom-large {
@@ -1474,4 +1606,8 @@ margin-bottom: 16px;
 
 .widget_archive ul {
     font-size: 1em;
+}
+
+.signup .form-control {
+    width: 100%;
 }
