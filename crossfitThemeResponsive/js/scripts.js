@@ -18,9 +18,58 @@ $(document).ready(function () {
         submitWork();
         //$.colorbox({href: "/index.html"});
     });
-    function submitWork() {
+        function submitWork() {
 
-	});
+            //this part sends to the server the chosen option from the SELECT
+            var selection = $('#poll').val();
+            var rawSelect = $("#poll option:selected").text();
+            var name = $('#name').val();
+            if (name == "" || name == " ") {
+                //no name given
+                console.log("no input");
+                $('#noInput').fadeIn("slow");
+                setTimeout(function () {
+                    $('#noInput').fadeOut("slow");
+                }, 10000);
+            } else {
+
+                $.ajax({
+                    //URL MIGHT NEED TO BE CHANGED !
+                    type: "GET",
+                    url: "../poll/pollHandler.php",
+                    data: {
+                        selection: selection,
+                        name: name,
+                        rawSelect: rawSelect
+                    },
+                    datatype: "html",
+                    success: function (result) {
+                        console.log(result);
+                        //var element = document.getElementById("signButton").parentNode;
+                        var element = document.getElementById("response");
+                        var para = document.createElement("p");
+                        para.setAttribute("class", "success");
+                        para.setAttribute("style", "border: 1px solid black;");
+                        var node = document.createTextNode("Thank you " + name + "! You've signed up for " + rawSelect);
+                        para.appendChild(node);
+                        element.appendChild(para);
+                        //document.getElementById("success").fadeOut("slow").delay(2000);
+                        //$('p', element)[0].fadeOut("slow").delay(2000);
+                        setTimeout(function () {
+                            $(".success").fadeOut("slow");
+                        }, 10000);
+
+                    },
+                    error: function (result) {
+                        alert("something went wrong, please try again later.");
+                        console.error(result);
+                    }
+
+
+                });
+            }
+
+        }
     
     
     function setCookie(key, value) {
@@ -253,7 +302,6 @@ $(document).ready(function () {
                 .attr("value", "wod5")
                 .text("20:30 RX club"));
     }
->>>>>>> fancybox
 
     function appendFri() {
 
