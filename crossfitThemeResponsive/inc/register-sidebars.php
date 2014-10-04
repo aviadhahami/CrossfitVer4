@@ -15,7 +15,7 @@ function response_widgets_init() {
         'name'          => 'Main Sidebar',
         'id'            => 'sidebar-1',
         'description'   => 'Widgets placed in this area will appear on all posts and pages with a sidebar.',
-        'before_widget' => '<div class="sidebar widget>"',
+        'before_widget' => '<div class="sidebar widget">',
         'after_widget'  => '</div>',
         'before_title'  => '<h4 class="widget-title h4">',
         'after_title'   => '</h4>'

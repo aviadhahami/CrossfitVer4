@@ -162,6 +162,7 @@ while (have_posts()) : the_post(); ?>
         <?php get_sidebar('main'); ?>
 
     </div><!-- end .col-xs-12 -->
+
     <!-- AFTER SIDEBAR -->
     </div>
 
