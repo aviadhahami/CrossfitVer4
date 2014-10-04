@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f444db24-4dde-4412-a188-34a0a99e7d38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ori Source Files/js/scripts.js" afterPath="$PROJECT_DIR$/Ori Source Files/js/scripts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crossfitThemeResponsive/template-wod.php" afterPath="$PROJECT_DIR$/crossfitThemeResponsive/template-wod.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crossfitThemeResponsive/footer.php" afterPath="$PROJECT_DIR$/crossfitThemeResponsive/footer.php" />
     </list>
     <ignored path="CrossfitVer4.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="template-wod.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="template-wod.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/template-wod.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="130" selection-start="3676" selection-end="3676" vertical-scroll-proportion="0.55341506" vertical-offset="1265" max-vertical-offset="3264">
+            <state line="97" column="130" selection-start="3676" selection-end="3676" vertical-scroll-proportion="-12.153846" vertical-offset="1265" max-vertical-offset="3264">
               <folding>
                 <element signature="e#979#1003#0" expanded="true" />
                 <element signature="e#1158#1182#0" expanded="true" />
@@ -43,6 +41,24 @@
                 <marker date="1412437189652" expanded="true" signature="5314:5448" placeholder="..." />
                 <marker date="1412437189652" expanded="true" signature="5400:5448" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="36" selection-start="1228" selection-end="1228" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="1224">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="89" column="86" selection-start="4771" selection-end="4771" vertical-scroll-proportion="0.642732" vertical-offset="1146" max-vertical-offset="1717">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,6 +92,7 @@
         <option value="$PROJECT_DIR$/crossfitThemeResponsive/tags.php" />
         <option value="$PROJECT_DIR$/crossfitThemeResponsive/js/scripts.js" />
         <option value="$PROJECT_DIR$/crossfitThemeResponsive/template-wod.php" />
+        <option value="$PROJECT_DIR$/crossfitThemeResponsive/footer.php" />
       </list>
     </option>
   </component>
@@ -413,7 +430,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/sidebar-home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="48" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="663" />
+        <state line="13" column="48" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="663">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/featured-post-open.php">
@@ -468,7 +487,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/sidebar-home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="32" selection-start="345" selection-end="476" vertical-scroll-proportion="0.29109588" vertical-offset="0" max-vertical-offset="584" />
+        <state line="15" column="32" selection-start="345" selection-end="476" vertical-scroll-proportion="0.29109588" vertical-offset="0" max-vertical-offset="584">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Ori Source Files/side.html">
@@ -486,13 +507,6 @@
     <entry file="file://$PROJECT_DIR$/Ori Source Files/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="49" selection-start="1742" selection-end="1744" vertical-scroll-proportion="-7.8" vertical-offset="502" max-vertical-offset="3672" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.5061296" vertical-offset="17" max-vertical-offset="1258">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/single.php">
@@ -608,7 +622,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/template-wod.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="130" selection-start="3676" selection-end="3676" vertical-scroll-proportion="0.55341506" vertical-offset="1265" max-vertical-offset="3264">
+        <state line="97" column="130" selection-start="3676" selection-end="3676" vertical-scroll-proportion="-12.153846" vertical-offset="1265" max-vertical-offset="3264">
           <folding>
             <element signature="e#979#1003#0" expanded="true" />
             <element signature="e#1158#1182#0" expanded="true" />
@@ -621,6 +635,20 @@
             <marker date="1412437189652" expanded="true" signature="5314:5448" placeholder="..." />
             <marker date="1412437189652" expanded="true" signature="5400:5448" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="36" selection-start="1228" selection-end="1228" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="86" selection-start="4771" selection-end="4771" vertical-scroll-proportion="0.642732" vertical-offset="1146" max-vertical-offset="1717">
+          <folding />
         </state>
       </provider>
     </entry>
