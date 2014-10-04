@@ -16,6 +16,7 @@ $(document).ready(function () {
     }
  });*/
     
+parent of 02c2247... fancybox
     $('#signup').on('click', function () {
         submitWork();
         //$.colorbox({href: "/index.html"});
