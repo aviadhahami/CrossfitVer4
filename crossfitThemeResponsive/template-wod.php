@@ -83,7 +83,31 @@ while (have_posts()) : the_post(); ?>
             //the_content();
             ?>
         </div>
+        <hr style="border: 1px dashed #e8ebed; margin-top: 38px;">
+        <div class="input-list style-4" style="<!--border-top: 1px dashed #e8ebed;-->">
 
+            <input type="text" placeholder="שם:">
+
+            <select>
+                <option>WOD - 16:00</option>
+                <option>WOD - 17:00</option>
+                <option>WOD - 06:00</option>
+                <option>KOBILITI</option>
+                <option>DEATH</option>
+            </select>
+
+            <div class="row buttonrow">
+
+                <div class="col-xs-2 buttoncell">
+                    <div class="partButton">
+                        <div class="partButtonText">מששתפים</div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <button id="signup" style="margin-bottom: 15px;">הרשמה לאימון</button>
+                </div>
+            </div>
+        </div>
         <!-- FACEBOOK PLUGIN -->
         <div align="left" class="postFooter inner-top-xxs inner-bottom-xxs outer-left-xs ">
 
@@ -159,7 +183,7 @@ while (have_posts()) : the_post(); ?>
     </div><!-- end #main_content -->
 
     <!-- BEFORE SIDEBAR -->
-        <?php get_sidebar('main'); ?>
+<?php get_sidebar('main'); ?>
 
     </div><!-- end .col-xs-12 -->
 

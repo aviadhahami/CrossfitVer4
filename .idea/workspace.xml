@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f444db24-4dde-4412-a188-34a0a99e7d38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crossfitThemeResponsive/inc/register-sidebars.php" afterPath="$PROJECT_DIR$/crossfitThemeResponsive/inc/register-sidebars.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crossfitThemeResponsive/template-wod.php" afterPath="$PROJECT_DIR$/crossfitThemeResponsive/template-wod.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -27,32 +26,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="side.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Ori Source Files/side.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="475" column="0" selection-start="30581" selection-end="31643" vertical-scroll-proportion="0.08058608" vertical-offset="8031" max-vertical-offset="10064">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#aside#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template-wod.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="template-wod.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/template-wod.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="0" selection-start="5814" selection-end="5814" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="561">
+            <state line="89" column="0" selection-start="3331" selection-end="3331" vertical-scroll-proportion="0.37478107" vertical-offset="1299" max-vertical-offset="3400">
               <folding>
                 <element signature="e#6#268#0" expanded="true" />
-                <element signature="e#381#5669#0" expanded="false" />
                 <element signature="e#979#1003#0" expanded="true" />
                 <element signature="e#1158#1182#0" expanded="true" />
                 <element signature="e#1338#1362#0" expanded="true" />
                 <element signature="e#1549#1573#0" expanded="true" />
                 <element signature="e#1812#1835#0" expanded="true" />
-                <element signature="e#3929#3952#0" expanded="true" />
-                <marker date="1412424604499" expanded="true" signature="4449:4583" placeholder="..." />
-                <marker date="1412424604499" expanded="true" signature="4535:4583" placeholder="..." />
+                <element signature="e#3137#3190#0" expanded="true" />
+                <element signature="e#3232#3278#0" expanded="true" />
+                <element signature="e#3924#3952#0" expanded="true" />
+                <element signature="e#4835#4858#0" expanded="true" />
+                <marker date="1412425409513" expanded="true" signature="5355:5489" placeholder="..." />
+                <marker date="1412425409513" expanded="true" signature="5441:5489" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="side.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Ori Source Files/side.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="475" column="22" selection-start="30665" selection-end="30665" vertical-scroll-proportion="-10.846154" vertical-offset="7793" max-vertical-offset="10081">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#aside#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,11 +76,11 @@
         <option value="$PROJECT_DIR$/crossfitThemeResponsive/template-regular page.php" />
         <option value="$PROJECT_DIR$/crossfitThemeResponsive/page.php" />
         <option value="$PROJECT_DIR$/crossfitThemeResponsive/index.php" />
-        <option value="$PROJECT_DIR$/Ori Source Files/side.html" />
         <option value="$PROJECT_DIR$/crossfitThemeResponsive/widget-plugin.php" />
         <option value="$PROJECT_DIR$/crossfitThemeResponsive/functions.php" />
         <option value="$PROJECT_DIR$/try/scripts/jquery-1.7.2.min.js" />
         <option value="$PROJECT_DIR$/crossfitThemeResponsive/inc/register-sidebars.php" />
+        <option value="$PROJECT_DIR$/Ori Source Files/side.html" />
         <option value="$PROJECT_DIR$/crossfitThemeResponsive/template-wod.php" />
       </list>
     </option>
@@ -174,20 +175,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Ori Source Files" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrossfitVer4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CrossfitVer4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crossfitThemeResponsive" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -298,15 +285,17 @@
         <state line="161" column="31" selection-start="8514" selection-end="8514" vertical-scroll-proportion="0.0" vertical-offset="2737" max-vertical-offset="2788">
           <folding>
             <element signature="e#6#268#0" expanded="true" />
-            <element signature="e#381#5669#0" expanded="false" />
             <element signature="e#979#1003#0" expanded="true" />
             <element signature="e#1158#1182#0" expanded="true" />
             <element signature="e#1338#1362#0" expanded="true" />
             <element signature="e#1549#1573#0" expanded="true" />
             <element signature="e#1812#1835#0" expanded="true" />
-            <element signature="e#3929#3952#0" expanded="true" />
-            <marker date="1412424604499" expanded="true" signature="4449:4583" placeholder="..." />
-            <marker date="1412424604499" expanded="true" signature="4535:4583" placeholder="..." />
+            <element signature="e#3137#3190#0" expanded="true" />
+            <element signature="e#3232#3278#0" expanded="true" />
+            <element signature="e#3924#3952#0" expanded="true" />
+            <element signature="e#4835#4858#0" expanded="true" />
+            <marker date="1412425409513" expanded="true" signature="5355:5489" placeholder="..." />
+            <marker date="1412425409513" expanded="true" signature="5441:5489" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -323,7 +312,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/sidebar-home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="48" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="663" />
+        <state line="13" column="48" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="663">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/featured-post-open.php">
@@ -401,11 +392,6 @@
         <state line="13" column="39" selection-start="470" selection-end="470" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/sidebar-home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="32" selection-start="345" selection-end="476" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="578" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="542" />
@@ -431,29 +417,38 @@
         <state line="11" column="46" selection-start="376" selection-end="376" vertical-scroll-proportion="0.26795095" vertical-offset="0" max-vertical-offset="2142" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/template-wod.php">
+    <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/sidebar-home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="0" selection-start="5814" selection-end="5814" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="561">
-          <folding>
-            <element signature="e#6#268#0" expanded="true" />
-            <element signature="e#381#5669#0" expanded="false" />
-            <element signature="e#979#1003#0" expanded="true" />
-            <element signature="e#1158#1182#0" expanded="true" />
-            <element signature="e#1338#1362#0" expanded="true" />
-            <element signature="e#1549#1573#0" expanded="true" />
-            <element signature="e#1812#1835#0" expanded="true" />
-            <element signature="e#3929#3952#0" expanded="true" />
-            <marker date="1412424604499" expanded="true" signature="4449:4583" placeholder="..." />
-            <marker date="1412424604499" expanded="true" signature="4535:4583" placeholder="..." />
-          </folding>
+        <state line="15" column="32" selection-start="345" selection-end="476" vertical-scroll-proportion="0.29109588" vertical-offset="0" max-vertical-offset="584">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Ori Source Files/side.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="475" column="0" selection-start="30581" selection-end="31643" vertical-scroll-proportion="0.08058608" vertical-offset="8031" max-vertical-offset="10064">
+        <state line="475" column="22" selection-start="30665" selection-end="30665" vertical-scroll-proportion="-10.846154" vertical-offset="7793" max-vertical-offset="10081">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#aside#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crossfitThemeResponsive/template-wod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="0" selection-start="3331" selection-end="3331" vertical-scroll-proportion="0.37478107" vertical-offset="1299" max-vertical-offset="3400">
+          <folding>
+            <element signature="e#6#268#0" expanded="true" />
+            <element signature="e#979#1003#0" expanded="true" />
+            <element signature="e#1158#1182#0" expanded="true" />
+            <element signature="e#1338#1362#0" expanded="true" />
+            <element signature="e#1549#1573#0" expanded="true" />
+            <element signature="e#1812#1835#0" expanded="true" />
+            <element signature="e#3137#3190#0" expanded="true" />
+            <element signature="e#3232#3278#0" expanded="true" />
+            <element signature="e#3924#3952#0" expanded="true" />
+            <element signature="e#4835#4858#0" expanded="true" />
+            <marker date="1412425409513" expanded="true" signature="5355:5489" placeholder="..." />
+            <marker date="1412425409513" expanded="true" signature="5441:5489" placeholder="..." />
           </folding>
         </state>
       </provider>
