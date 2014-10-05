@@ -19,7 +19,7 @@
 
 
         <!--<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />-->
-       <!--  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>-->
+          <script src="https://code.jquery.com/jquery-2.1.1.js"></script> 
         <?php //wp_enqueue_script("jquery"); ?>
 
         <!-- SHIT LOAD OF LINKS -->
