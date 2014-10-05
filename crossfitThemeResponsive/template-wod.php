@@ -34,15 +34,20 @@ while (have_posts()) : the_post(); ?>
                 <i class="fa fa-calendar"></i>&nbsp;
                 <div style="display: inline;"><?php the_time('F j, Y'); ?>&nbsp;&nbsp;</div>
                 <!--With &nbsp;-->
+                <!--
                 <i class="fa fa-comment"></i>&nbsp;
                 <div style="display: inline;">
                     <a href="#">9 תגובות</a>&nbsp;&nbsp;
                 </div>
+-->
+               
                 <!--and &nbsp;-->
+                <!--
                 <i class="fa fa-heart"></i>&nbsp;
                 <div style="display: inline;">
                     <a href="#">145 לייקים</a>&nbsp;&nbsp;
                 </div>
+-->
             </h4>
         </div>
 
