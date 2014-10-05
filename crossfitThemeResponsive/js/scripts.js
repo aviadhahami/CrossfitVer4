@@ -1,6 +1,82 @@
 $(document).ready(function() {
 
 
+    /**CONTACT US FORM **/
+
+    //Mail validator - regex based
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+    $("#submitForm").on("click", function() {
+        submitForm()
+    });
+    /* Form Handeling Script*/
+    function submitForm() {
+        var contactName = $("#contactName").val();
+        var contactMail = $("#contactEmail").val();
+        var contactPhone = $("#contactPhone").val();
+        // alert(contactPhone);
+        var contactText = $("#contactTextarea").val();
+        if (contactName.length < 2 || contactName == "" || contactName == " ") {
+            $("#contactName").css("border-color", "red");
+            $("#nameLabel").append("<p id='error'>Please enter a valid name</p>");
+            $("#nameLabel > p").delay(5000).fadeOut(500);
+            //$("#error").html("");
+            return;
+        } else {
+            $("#contactName").css("border-color", "green");
+        }
+
+
+        if (!validateEmail(contactMail)) {
+            $("#contactEmail").css("border-color", "red");
+            $("#emailLabel").append("<p id='error'>Please enter a valid mail</p>");
+            $("#emailLabel > p").delay(5000).fadeOut(500);
+            //$("#error").html("");
+            return;
+        } else {
+            $("#contactEmail").css("border-color", "green");
+        } if (contactText.length < 5 || contactText == "" || contactText == " ") {
+            $("#contactTextarea").css("border-color", "red");
+            $("#messageLabel").append("<p id='error'>Please enter a valid text</p>");
+            $("#messageLabel > p").delay(5000).fadeOut(500);
+            //$("#error").html("");
+            return;
+        } else {
+            $("#contactTextarea").css("border-color", "green");
+        }
+
+
+
+
+        var post_data = {
+            'userName': contactName,
+            'userMail': contactMail,
+            'userText': contactText,
+            'userPhone': contactPhone,
+        };
+        //now we send to the server
+        console.log("Sending mail with the following attr " + contactName + " " + contactMail + " " + contactText + " " + contactPhone);
+
+        $.post('../mail/mailHandler.php', post_data, function(response) {
+
+            if (response === "1") {
+                //we're good
+                console.log(response);
+                alert("Your mail has been sent");
+            } else {
+                //we're not good
+                console.error(response);
+                 alert("an error occoured, try later");
+            }
+
+        });
+    }
+
+    /** END OF CONTACT US **/
+
 
     $(".signup").fancybox({
         maxWidth: 800,
@@ -18,7 +94,7 @@ $(document).ready(function() {
         submitWork();
         //$.colorbox({href: "/index.html"});
     });
-    
+
     function submitWork() {
 
         //this part sends to the server the chosen option from the SELECT
@@ -390,7 +466,7 @@ $(document).ready(function() {
                     console.log(result);
                     //set cookie for the part's name
                     setCookie("partName", $('#name').val());
-                     setCookie("partTime",rawSelect);
+                    setCookie("partTime", rawSelect);
 
                 },
                 error: function(result) {
