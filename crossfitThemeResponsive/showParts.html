@@ -14,7 +14,14 @@
          //INTRO 
         var name = getCookie("partName");
         var time = getCookie("partTime");
-        document.getElementById("boxTitle").innerHTML = " שלום " + name + "," + " נרשמת ל " + time + "!";
+        if (getCookie("partName") != null) {
+            document.getElementById("boxTitle").innerHTML = " שלום " + name + "," + " נרשמת ל " + time + "!";
+        } else {
+            document.getElementById("boxTitle").innerHTML = "שלום משתמש, לא בוצעה הרשמה";
+            document.getElementById("boxSubTitle").innerHTML = "שים לב כי אתה מבצע הרשמה תקינה";
+
+        }
+
          //END OF INTRO
 
          //AJAX SETUP
@@ -65,7 +72,7 @@
         }
     </script>
     <h3 id="boxTitle"></h3>
-    <p>יחד איתך באימון יהיו..</p>
+    <p id="boxSubTitle">יחד איתך באימון יהיו..</p>
     <span id="output">טוען...</span>
 
 
