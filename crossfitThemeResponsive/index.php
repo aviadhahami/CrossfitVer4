@@ -118,9 +118,9 @@
 
             </div>
             <!-- end #main_content -->
-            <?php get_sidebar('main'); ?>
+            
         </div>
-
+<?php get_sidebar('main'); ?>
         <!-- end .col-xs-12 -->
         
     </div>
