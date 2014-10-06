@@ -289,7 +289,7 @@ $(document).ready(function() {
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod4")
-                .text("19:30 WOD"));
+                .text("19:30 ENDURANCE"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod5")
@@ -383,11 +383,11 @@ $(document).ready(function() {
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod4")
-                .text("19:30 Endurance"));
+                .text("19:30 ENDURANCE"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod5")
-                .text("20:30 RX club"));
+                .text("20:30 RX CLUB"));
     }
 
     function appendFri() {
