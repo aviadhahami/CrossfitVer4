@@ -5,10 +5,25 @@
  * Template for Comments and Pingbacks
  * ============================================================= */
 ?>
-    <div id="comments">
+
+     <?php if ( have_comments() ) : ?>
+        <h3 id="comments-title">
+            <?php
+                printf( _n( 'One Response to &ldquo;%2$s&rdquo;', '%1$s Responses to &ldquo;%2$s&rdquo;', get_comments_number() ),
+                    number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+            ?>
+        </h3>
+    
+    <div id="comments" class="blogComments <!--inner-bottom-xxs-img-->">
+                            <div class="container-fluid">
+                                <div class="row-fluid">
+                                    
     <?php if ( post_password_required() ) : ?>
         <p class="nopassword hero-p"><?php echo 'This post is password protected.<br/>Please enter the password to view any comments.'; ?></p>
-    </div><!-- #comments -->
+            </div>
+        </div>
+</div>
+<!-- #comments -->
     <?php
             /* Stop the rest of comments.php from being processed,
              * but don't kill the script entirely -- we still have
@@ -18,14 +33,6 @@
         endif;
     ?>
 
-    <?php if ( have_comments() ) : ?>
-        <h3 id="comments-title">
-            <?php
-                printf( _n( 'One Response to &ldquo;%2$s&rdquo;', '%1$s Responses to &ldquo;%2$s&rdquo;', get_comments_number() ),
-                    number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-            ?>
-        </h3>
-
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
         <nav id="comment-nav-above">
             <h1 class="visually-hidden"><?php echo 'comment navigation'; ?></h1>
@@ -34,17 +41,9 @@
         </nav>
         <?php endif; // check for comment navigation ?>
 
-        <ol class="commentlist">
-            <?php
-                /* Loop through and list the comments. Tell wp_list_comments()
-                 * to use respond_comment() to format the comments.
-                 * If you want to overload this in a child theme then you can
-                 * define respond_comment() and that will be used instead.
-                 * See respond_comment() in functions.php for more.
-                 */
-                wp_list_comments( array( 'callback' => 'respond_comment' ) );
-            ?>
-        </ol>
+<ul class="commentlist" style="font-size: 1em;">
+<?php wp_list_comments( 'type=comment&callback=mytheme_comment' ); ?>
+</ul>
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
         <nav id="comment-nav-below">
@@ -76,4 +75,7 @@
         ));
     ?>
 	</div>
-</div><!-- #comments -->
+    </div>
+</div>
+</div>
+<!-- #comments -->

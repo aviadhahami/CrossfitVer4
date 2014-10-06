@@ -139,6 +139,12 @@ while (have_posts()) : the_post(); ?>
                 <? the_tags('תגיות:&nbsp;&nbsp;&nbsp;&nbsp;', ' ', ' '); ?></div>
         </div>
     </div>
+        
+        <div class="blogComments <!--inner-bottom-xxs-img-->">
+                            <div class="container-fluid">
+                                <div class="row-fluid">
+        <?php comments_template(); ?>
+                                </div></div></div>
 
     <!-- END OF TAGS -->
 
@@ -183,7 +189,8 @@ while (have_posts()) : the_post(); ?>
 
     <!-- END OF PREVIOUS WOD -->
 
-
+        <?php comments_template(); ?>
+                                </div></div></div>    
 
     <?php break; endwhile; ?>
 
