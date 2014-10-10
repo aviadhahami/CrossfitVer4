@@ -12,7 +12,7 @@
         }
 
          //INTRO 
-       
+        //CHECK
 
          //END OF INTRO
 
@@ -23,16 +23,20 @@
         var yy = today.getFullYear().toString().substr(2, 2);;
 
         if (dd < 10) {
-            dd = '0' + dd
+            dd = '0' + dd;
         }
 
         if (mm < 10) {
-            mm = '0' + mm
+            mm = '0' + mm;
         }
-
-        today = dd + mm + yy;
+     /*   console.log(dd);
+        console.log(mm);
+        console.log(String(dd) + String(mm));*/
+        today = String(dd) + String(mm) + String(yy);
+        console.log(today);
         document.getElementById("boxTitle").innerHTML = "רשימת משתתפים עבור ה- " + dd + "/" + mm + "/" + yy;
-         //document.getElementById("output").textoutput = today;
+         document.getElementById("output").textoutput = today;
+        
         var url = "../poll/pollData/" + today + "-Wod.xml";
 
         $.ajax({
@@ -208,7 +212,7 @@
 
             //*********************************//
             //*********** END OF CASE ***********//
-            
+
 
         }
     </script>

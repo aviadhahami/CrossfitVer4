@@ -11,7 +11,7 @@ if ($selection == "" || $clientName == "" || $rawSelect ==""){
 date_default_timezone_set("Asia/Kolkata");
 //UTC + 06:00 (KOLKATA) TO FIT THE SIGNUP FOR 20:00 ISRAEL TIME
 $dateNumber = date("dmy");
-
+echo ($dateNumber);
 if (file_exists("pollData/" . $dateNumber . "-Wod.xml")) {
     echo("XML exists, adding new records...");
     //Load the XML

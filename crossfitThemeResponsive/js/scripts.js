@@ -69,7 +69,7 @@ $(document).ready(function() {
             } else {
                 //we're not good
                 console.error(response);
-                 alert("an error occoured, try later");
+                alert("an error occoured, try later");
             }
 
         });
@@ -77,25 +77,27 @@ $(document).ready(function() {
 
     /** END OF CONTACT US **/
 
-
     $(".signup").fancybox({
-        maxWidth: 800,
-        maxHeight: 600,
-        fitToView: false,
-        width: '70%',
-        height: '70%',
-        autoSize: false,
-        closeClick: false,
-        openEffect: 'none',
-        closeEffect: 'none'
+	maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+
+
     });
 
     $('#signup').on('click', function() {
+        busy = true;
         submitWork();
         //$.colorbox({href: "/index.html"});
     });
 
-    function submitWork() {
+/*    function submitWork() {
 
         //this part sends to the server the chosen option from the SELECT
         var selection = $('#poll').val();
@@ -122,6 +124,7 @@ $(document).ready(function() {
                 datatype: "html",
                 success: function(result) {
                     console.log(result);
+                    
                     //var element = document.getElementById("signButton").parentNode;
                     var element = document.getElementById("response");
                     var para = document.createElement("p");
@@ -146,7 +149,7 @@ $(document).ready(function() {
             });
         }
 
-    }
+    }*/
 
 
     function setCookie(key, value) {

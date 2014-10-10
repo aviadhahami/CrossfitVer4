@@ -97,18 +97,19 @@ while (have_posts()) : the_post(); ?>
             </select>
 
             <div class="row buttonrow">
-                <a href="<?php bloginfo('template_directory'); ?>/showAllParts.html" class="signup various fancybox.ajax">
+                <a href="<?php //bloginfo('template_directory'); ?>showAllParts.html" class="signup various fancybox.ajax">
                 <div class="col-xs-2 buttoncell">
                   
                     <div class="partButton" style="background-image:url(<?php bloginfo('template_url'); ?>/img/expend.png);">
                         
                        <!-- <div class="partButtonText">מששתפים</div>-->
                     </div>
-                    </a>
+                     </a>
+                   
                 </div>
                 <div class="col-xs-10">
                     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
-                    <a href="<?php bloginfo('template_directory'); ?>/showParts.html" id="signup" class="signup various fancybox.ajax">
+                    <a href="<?php //bloginfo('template_directory'); ?>/showParts.html" id="signup" class="signup various fancybox.ajax">
                    
                       <button style="margin-bottom: 15px;">הרשמה לאימון</button>
                         </a>
@@ -190,15 +191,19 @@ while (have_posts()) : the_post(); ?>
     <!-- END OF PREVIOUS WOD -->
 
         <?php comments_template(); ?>
-                                </div></div></div>    
+                                </div>
+            <!-- BEFORE SIDEBAR -->
+<?php get_sidebar('main'); ?></div>
+        
+        
+
+        </div>    
 
     <?php break; endwhile; ?>
 
-
     </div><!-- end #main_content -->
 
-    <!-- BEFORE SIDEBAR -->
-<?php get_sidebar('main'); ?>
+
 
     </div><!-- end .col-xs-12 -->
 
