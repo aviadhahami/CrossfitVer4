@@ -1,7 +1,7 @@
 <?php /*=============================================================* header.php *=============================================================* Displays all of the <head>section and everything up to the * end of the
 <div class="row">containing the site title and *
     <hr>below for responsive spacing * ============================================================= */ ?>
-    <!doctype html>
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <!--[if IE 8]>         <html class="no-js lt-ie9" <?php language_attributes(); ?>> <![endif]-->
     <!--[if gt IE 8]><!-->
     <html class="no-js" <?php language_attributes(); ?>>

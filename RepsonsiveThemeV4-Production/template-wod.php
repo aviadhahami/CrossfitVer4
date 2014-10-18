@@ -34,15 +34,20 @@ while (have_posts()) : the_post(); ?>
                 <i class="fa fa-calendar"></i>&nbsp;
                 <div style="display: inline;"><?php the_time('F j, Y'); ?>&nbsp;&nbsp;</div>
                 <!--With &nbsp;-->
+                <!--
                 <i class="fa fa-comment"></i>&nbsp;
                 <div style="display: inline;">
                     <a href="#">9 תגובות</a>&nbsp;&nbsp;
                 </div>
+-->
+               
                 <!--and &nbsp;-->
+                <!--
                 <i class="fa fa-heart"></i>&nbsp;
                 <div style="display: inline;">
                     <a href="#">145 לייקים</a>&nbsp;&nbsp;
                 </div>
+-->
             </h4>
         </div>
 
@@ -92,14 +97,22 @@ while (have_posts()) : the_post(); ?>
             </select>
 
             <div class="row buttonrow">
-
+                <a href="<?php //bloginfo('template_directory'); ?>showAllParts.html" class="signup various fancybox.ajax">
                 <div class="col-xs-2 buttoncell">
+                  
                     <div class="partButton" style="background-image:url(<?php bloginfo('template_url'); ?>/img/expend.png);">
+                        
                        <!-- <div class="partButtonText">מששתפים</div>-->
                     </div>
+                     </a>
+                   
                 </div>
                 <div class="col-xs-10">
-                    <button id="signup" style="margin-bottom: 15px;">הרשמה לאימון</button>
+                    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
+                    <a href="<?php //bloginfo('template_directory'); ?>/showParts.html" id="signup" class="signup various fancybox.ajax">
+                   
+                      <button style="margin-bottom: 15px;">הרשמה לאימון</button>
+                        </a>
                 </div>
             </div>
         </div>
@@ -127,6 +140,12 @@ while (have_posts()) : the_post(); ?>
                 <? the_tags('תגיות:&nbsp;&nbsp;&nbsp;&nbsp;', ' ', ' '); ?></div>
         </div>
     </div>
+        
+        <div class="blogComments <!--inner-bottom-xxs-img-->">
+                            <div class="container-fluid">
+                                <div class="row-fluid">
+        <?php comments_template(); ?>
+                                </div></div></div>
 
     <!-- END OF TAGS -->
 
@@ -141,7 +160,7 @@ while (have_posts()) : the_post(); ?>
 
                     <?php
                     //$src =bloginfo('template_directory') . '/img/blank.gif';
-                    $args = array('numberposts' => '7', 'category' => get_cat_ID('wod'),);
+                    $args = array('numberposts' => '7', 'category' => get_cat_ID('wod'),'post_status' => 'publish');
                     $recent_posts = wp_get_recent_posts($args);
                     foreach ($recent_posts as $recent) {
                         echo ' <div class="grid">
@@ -171,15 +190,20 @@ while (have_posts()) : the_post(); ?>
 
     <!-- END OF PREVIOUS WOD -->
 
+        <?php comments_template(); ?>
+                                </div>
+            <!-- BEFORE SIDEBAR -->
+<?php get_sidebar('main'); ?></div>
+        
+        
 
+        </div>    
 
     <?php break; endwhile; ?>
 
-
     </div><!-- end #main_content -->
 
-    <!-- BEFORE SIDEBAR -->
-<?php get_sidebar('main'); ?>
+
 
     </div><!-- end .col-xs-12 -->
 

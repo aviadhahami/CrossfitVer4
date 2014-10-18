@@ -28,7 +28,7 @@
                             <?php the_title(); ?>
                         </h1>
                         <h4>
-                            <!-- CRAP TEXT WHY AVIAD? -->
+                           
                             <!--Written by &nbsp;-->
                             <i class="fa fa-user"></i>&nbsp;
                             <div style="display: inline;"> <?php the_author_link(); ?>&nbsp;&nbsp;</div>
@@ -118,9 +118,9 @@
 
             </div>
             <!-- end #main_content -->
-            <?php get_sidebar('main'); ?>
+            
         </div>
-
+<?php get_sidebar('main'); ?>
         <!-- end .col-xs-12 -->
         
     </div>
