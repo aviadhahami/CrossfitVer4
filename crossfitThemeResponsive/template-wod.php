@@ -97,7 +97,7 @@ while (have_posts()) : the_post(); ?>
             </select>
 
             <div class="row buttonrow">
-                <a href="<?php //bloginfo('template_directory'); ?>showAllParts.html" class="signup various fancybox.ajax">
+                <a href="<?php //bloginfo('template_directory'); ?>/showAllParts.html" class="signup various fancybox.ajax">
                 <div class="col-xs-2 buttoncell">
                   
                     <div class="partButton" style="background-image:url(<?php bloginfo('template_url'); ?>/img/expend.png);">
