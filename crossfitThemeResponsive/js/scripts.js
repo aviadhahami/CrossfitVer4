@@ -78,15 +78,15 @@ $(document).ready(function() {
     /** END OF CONTACT US **/
 
     $(".signup").fancybox({
-	maxWidth	: 800,
-		maxHeight	: 600,
-		fitToView	: false,
-		width		: '70%',
-		height		: '70%',
-		autoSize	: false,
-		closeClick	: false,
-		openEffect	: 'none',
-		closeEffect	: 'none'
+        maxWidth: 800,
+        maxHeight: 600,
+        fitToView: false,
+        width: '70%',
+        height: '70%',
+        autoSize: false,
+        closeClick: false,
+        openEffect: 'none',
+        closeEffect: 'none'
 
 
     });
@@ -97,7 +97,7 @@ $(document).ready(function() {
         //$.colorbox({href: "/index.html"});
     });
 
-/*    function submitWork() {
+    /*    function submitWork() {
 
         //this part sends to the server the chosen option from the SELECT
         var selection = $('#poll').val();
@@ -260,10 +260,18 @@ $(document).ready(function() {
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod4")
-                .text("19:30 WOD"));
+                .text("19:00 WOD - HALL B"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod5")
+                .text("19:30 WOD"));
+        $('#poll')
+            .append($("<option></option>")
+                .attr("value", "wod6")
+                .text("20:00 WOD - HALL B"));
+        $('#poll')
+            .append($("<option></option>")
+                .attr("value", "wod7")
                 .text("20:30 WOD"));
     }
 
