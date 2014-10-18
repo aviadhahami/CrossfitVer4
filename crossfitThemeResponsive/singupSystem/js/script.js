@@ -69,6 +69,7 @@ $(document).ready(function() {
         var url = "overrides/" + date + "-Override.xml";
         console.log(url);
         $("#response").text("");
+        $("#poll").empty();
         $.ajax({
             type: "GET",
             url: url,
