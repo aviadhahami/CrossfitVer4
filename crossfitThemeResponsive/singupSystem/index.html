@@ -26,14 +26,10 @@
                 <tbody>
                     <tr id="tableHeader">
                         <th>מזהה</th>
-                        <th>שעות</th>
-                        <th>סוג האימון</th>
+                        <th>שם האימון ושעה</th>
                         <th>#</th>
                     </tr>
                     <tr>
-                        <td>
-                            <input type="text">
-                        </td>
                         <td>
                             <input type="text">
                         </td>
@@ -48,13 +44,35 @@
             </table>
         </div>
         <div id="buttons">
-            <button id="removeRow">מחק שורה אחרונה</button>
-            <button id="appendRow">הוסף שורה</button>
-            <br />
-            <button id="reset">מחק הכל</button>
-            <button id="submit">שלח טופס</button>
+            <table>
+                <tr>
+                    <td>
+                        <button id="removeRow">מחק שורה אחרונה</button>
+                    </td>
+                    <td>
+                        <button id="appendRow">הוסף שורה</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="reset">מחק הכל</button>
+                    </td>
+                    <td>
+                        <button id="submit">שלח טופס</button>
+                    </td>
+                </tr>
+            </table>
+
+
+
+
         </div>
         <p id="response"></p>
+
+        <div id="preview">
+            <h3>תצוגה מקדימה</h3>
+            <select id="poll"></select>
+        </div>
     </div>
 </body>
 

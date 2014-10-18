@@ -25,9 +25,7 @@ td {
     border-collapse: collapse;
     border: 1px solid black;
 }
-button {
-    width: 20%;
-}
+button{margin:0 auto;}
 #buttons {
     text-align: center;
     margin: 0 auto;
