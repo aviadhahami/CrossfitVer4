@@ -15,7 +15,7 @@ $(document).ready(function() {
         console.log("cellCounter = " + cellCounter);
     });
     $("#appendRow").on("click", function() {
-        var tableRow = '<tr><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" /></td><td><p>' + cellCounter + '</p></td></tr>';
+        var tableRow = '<tr><td><input type="text" /></td><td><input type="text" /></td><td><p>' + cellCounter + '</p></td></tr>';
         $("#mainTable tr:last").after(tableRow);
         cellCounter++;
         console.log("cellCounter = " + cellCounter);

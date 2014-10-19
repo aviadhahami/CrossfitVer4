@@ -206,7 +206,7 @@
 
                 //*********************************//
                 //*********** END OF CASE ***********//
-                
+
                 //wod6 case
                 $(xml).find('participant').each(function() {
                     if ($(this).find('wod').text() == "wod6") {
@@ -228,7 +228,7 @@
 
                 //*********************************//
                 //*********** END OF CASE ***********// 
-                
+
                 //wod7 case
                 $(xml).find('participant').each(function() {
                     if ($(this).find('wod').text() == "wod7") {
@@ -250,8 +250,74 @@
 
                 //*********************************//
                 //*********** END OF CASE ***********//
+
+                //wod8 case
+                $(xml).find('participant').each(function() {
+                    if ($(this).find('wod').text() == "wod8") {
+                        totalParts++;
+                        localParts++;
+                        if (count == 0) {
+                            count = 1;
+                            $("#output").append("<hr /><span class='title'>" + $(this).find('rawData').text() + "</span>");
+                        }
+                        $("#output").append("<li>" + $(this).find('name').text() + "</li>");
+
+                    }
+                });
+                if (count > 0) {
+                    $("#output").append("<span class='subTitle'>סך הכל משתתפים: " + localParts + "</span>");
+                }
+                localParts = 0;
+                count = 0;
+
+                //*********************************//
+                //*********** END OF CASE ***********//
+
+                //wod9 case
+                $(xml).find('participant').each(function() {
+                    if ($(this).find('wod').text() == "wod9") {
+                        totalParts++;
+                        localParts++;
+                        if (count == 0) {
+                            count = 1;
+                            $("#output").append("<hr /><span class='title'>" + $(this).find('rawData').text() + "</span>");
+                        }
+                        $("#output").append("<li>" + $(this).find('name').text() + "</li>");
+
+                    }
+                });
+                if (count > 0) {
+                    $("#output").append("<span class='subTitle'>סך הכל משתתפים: " + localParts + "</span>");
+                }
+                localParts = 0;
+                count = 0;
+
+                //*********************************//
+                //*********** END OF CASE ***********//
                 
-                
+                 //wod10 case
+                $(xml).find('participant').each(function() {
+                    if ($(this).find('wod').text() == "wod10") {
+                        totalParts++;
+                        localParts++;
+                        if (count == 0) {
+                            count = 1;
+                            $("#output").append("<hr /><span class='title'>" + $(this).find('rawData').text() + "</span>");
+                        }
+                        $("#output").append("<li>" + $(this).find('name').text() + "</li>");
+
+                    }
+                });
+                if (count > 0) {
+                    $("#output").append("<span class='subTitle'>סך הכל משתתפים: " + localParts + "</span>");
+                }
+                localParts = 0;
+                count = 0;
+
+                //*********************************//
+                //*********** END OF CASE ***********//
+
+
 
 
             }
