@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>XML records pull</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script src="recordsHandler.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" href="recordStyle.css" />
+</head>
+
+<body>
+    <h1>Daily WOD Records</h1>
+    <input type="text" id="datepicker" placeholder="Pick a date" />
+<br />
+    <button id="sendButton">GO!</button>
+    <button onclick="window.print();return false;">PRINT</button>
+
+    <br />
+    <span id="output"></span>
+    <div id="content"></div>
+
+
+</body>
+
+</html>

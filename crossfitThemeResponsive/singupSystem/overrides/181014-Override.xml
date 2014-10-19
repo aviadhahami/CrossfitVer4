@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<data>
+    <option>
+        <value>wod1</value>
+        <rawData>06:00 WOD</rawData>
+    </option>
+    <option>
+        <value>wod2</value>
+        <rawData>09:00 WOD</rawData>
+    </option>
+    <option>
+        <value>open1</value>
+        <rawData>09:00-11:00 OPEN GYM</rawData>
+    </option>
+</data>

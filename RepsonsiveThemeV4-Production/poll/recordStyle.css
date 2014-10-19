@@ -1,0 +1,77 @@
+body {
+    text-align: center;
+    background-color: grey;
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    width: 100%;
+    font-size: 5em;
+}
+input,
+select,
+textarea {
+    text-align: center;
+    font-size: 3em;
+}
+button {
+    text-align: center;
+    font-size: 5em;
+    border: 1px black solid;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+}
+#content {
+    text-align: right;
+    direction: rtl;
+    width: 30%;
+    min-width: 30%;
+    margin: 0 auto;
+    font-size: 2em;
+}
+#output {
+    font-size: 1.2em;
+}
+.title {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.subTitle {
+    text-decoration: underline;
+}
+.button2 {
+    text-align: center;
+    font-size: 2em;
+}
+@media print {
+    h1 {
+        font-size: 20px;
+    }
+    br {
+        height: 0;
+    }
+    #output {
+        font-size: 12px;
+    }
+    #datepicker {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+    #content {
+        text-align: right;
+        font-size: 10px;
+    }
+    button {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+    body>p {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+}
