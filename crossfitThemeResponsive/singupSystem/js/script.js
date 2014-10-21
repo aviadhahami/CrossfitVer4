@@ -1,5 +1,14 @@
 $(document).ready(function() {
+
+
+    var myDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var today = new Date();
+    today = today.getDay();
+    var todayName = myDays[today];
+
+
     var cellCounter = 2;
+
     /* BUTTON HANDLERS */
     $("#submit").on("click", function() {
         if (submitValidation()) {
@@ -33,11 +42,18 @@ $(document).ready(function() {
         $("#datepicker").datepicker({
             dateFormat: 'dd/mm/y',
             onClose: function() {
-                appender($(this).val());
+                appenderByDate($(this).val());
             }
 
         });
 
+    });
+
+    //DAY SELECTION HANDLER //
+    $('#dayPicker').on('change', function(e) {
+        var optionSelected = $("option:selected", this);
+        var valueSelected = this.value;
+        getDefaultScheduleByDay(valueSelected);
     });
 
     /* FUNCTIONS AREA */
@@ -64,9 +80,9 @@ $(document).ready(function() {
 
     //POLL DATA INJETION
     //insert the daily sched
-    function appender(date) {
+    function appenderByDate(date) {
         date = date.replace(/\//g, '');
-        var url = "overrides/" + date + "-Override.xml";
+        var url = "scheduleData/" + date + "-Override.xml";
         console.log(url);
         $("#response").text("");
         $("#poll").empty();
@@ -76,7 +92,8 @@ $(document).ready(function() {
             datatype: "xml",
             statusCode: {
                 404: function() {
-                    $("#response").text("אין קובץ העוקף את הלו''ז המקורי");
+                    $("#response").text("אין קובץ העוקף את הלוז המקורי, מציג את ברירת המחדל להיום");
+                    getDefaultScheduleByDay(todayName);
                 }
             },
             success: function(xml) {
@@ -99,251 +116,57 @@ $(document).ready(function() {
     }
 
 
-    //** LEGACY CODE **//
-    function insertSelectOptions(day) {
-        switch (day) {
-            case 1:
-                {
-                    appendSun();
-                    break;
+
+    function getDefaultScheduleByDay(day) {
+        var url = "scheduleData/" + day + ".xml";
+        $("#response").text("");
+        $("#poll").empty();
+
+        $.ajax({
+            type: "GET",
+            url: url,
+            datatype: "xml",
+            statusCode: {
+                404: function() {
+                    var outputStr = "חלה שגיאת 404, קובץ לא נמצא";
+                    $("#response").text(outputStr);
                 }
-            case 2:
-                {
-                    appendMon();
-                    break;
-                }
-            case 3:
-                {
-                    appendTue();
-                    break;
-                }
-            case 4:
-                {
-                    appendWed();
-                    break;
-                }
-            case 5:
-                {
-                    appendThu();
-                    break;
-                }
-            case 6:
-                {
-                    appendFri();
-                    break;
-                }
-            case 7:
-                {
-                    appendSat();
-                    break;
-                }
+            },
+            success: function(xml) {
+                cellCounter =2;
+                console.log(xml);
+                //Append to <select>
+                $(xml).find("data option").each(function() {
+                    var val = $(this).find("value").text();
+                    var rawData = $(this).find("rawData").text();
+                    var option = "<option val=" + val + ">" + rawData + "</option>";
+                    console.log(option);
+                    //option.appendTo("#poll");
+                    $("#poll").append(option);
+                });
 
+                //Append to table
+                //$('#mainTable tr:gt(1)').empty();
+                $(xml).find("data option").each(function() {
+                    var val = $(this).find("value").text();
+                    var rawData = $(this).find("rawData").text();
+                    var newRow = "<tr>";
+                    var valueTableCell = "<td><input type=text value='" + val + "'></input></td>";
+                    var rawDataTableCell = "<td><input type=text value='" + rawData + "'></input></td>";
+                    var counterTableCell = "<td>" + cellCounter + "</td>";
+                    newRow = newRow + valueTableCell + rawDataTableCell + counterTableCell;
+                    newRow = newRow + "</tr>";
+                    $("#mainTable #tableHeder").after(newRow);
+                    cellCounter++;
+                });
 
-        }
-    }
-
-    function appendSun() {
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod1")
-                .text("06:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open1")
-                .text("06:00-11:00 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open2")
-                .text("15:00-21:30 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod2")
-                .text("17:30 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod3")
-                .text("18:30 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod4")
-                .text("19:30 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod5")
-                .text("20:30 WOD"));
-    }
-
-    function appendMon() {
-
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open1")
-                .text("06:00-11:00 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod1")
-                .text("09:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open2")
-                .text("15:00-21:30 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod2")
-                .text("17:30 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod3")
-                .text("18:30 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod4")
-                .text("19:30 ENDURANCE"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod5")
-                .text("20:30 WOD"));
-    }
-
-    function appendTue() {
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod1")
-                .text("06:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open1")
-                .text("06:00-11:00 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open2")
-                .text("15:00-21:30 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod2")
-                .text("17:30 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod3")
-                .text("18:30 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod4")
-                .text("19:30 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod5")
-                .text("20:30 WOD"));
-    }
-
-    function appendWed() {
-
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open1")
-                .text("06:00-11:00 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod1")
-                .text("09:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open2")
-                .text("15:00-21:30 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod2")
-                .text("17:30 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod3")
-                .text("18:30 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod4")
-                .text("19:30 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod5")
-                .text("20:30 Mobility"));
-    }
-
-    function appendThu() {
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod1")
-                .text("06:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open1")
-                .text("06:00-11:00 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open2")
-                .text("15:00-21:30 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod2")
-                .text("17:30 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod3")
-                .text("18:30 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod4")
-                .text("19:30 ENDURANCE"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod5")
-                .text("20:30 RX CLUB"));
-    }
-
-    function appendFri() {
-
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open1")
-                .text("08:00-14:00 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod2")
-                .text("11:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod3")
-                .text("12:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod4")
-                .text("13:00 WOD"));
+            },
+            error: function(err) {
+                console.error('ERROR');
+                console.log(err.statusText);
+            }
+        });
 
     }
-
-    function appendSat() {
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod1")
-                .text("10:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open1")
-                .text("10:00-12:00 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open2")
-                .text("19:00-21:00 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod2")
-                .text("19:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod3")
-                .text("20:00 WOD"));
-
-    }
-
-    //DONE WITH THE OPTIONS INJECTIONS
 
 });

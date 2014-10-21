@@ -1,77 +1,101 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
-           $(".signup").fancybox({
-		closeBtn		: false,
-		helpers		: {
-			title	: { type : 'inside' },
-			buttons	: {},
-        overlay : {
-            locked: 'false',
-            css : {
-                'background' : 'rgba(67, 67, 67, 0.85)'
+    $(".signup").fancybox({
+        maxWidth: 800,
+        maxHeight: 600,
+        fitToView: false,
+        width: '70%',
+        height: '70%',
+        autoSize: false,
+        closeClick: false,
+        openEffect: 'none',
+        closeEffect: 'none',
+        beforeShow: function() {
+            $("body").css({
+                'overflow-y': 'hidden'
+            });
+        },
+        afterClose: function() {
+            $("body").css({
+                'overflow-y': 'visible'
+            });
+        },
+
+        /*     closeBtn: true,
+        helpers: {
+            title: {
+                type: 'inside'
+            },
+            buttons: {},
+            overlay: {
+                locked: 'false',
+                css: {
+                    'background': 'rgba(67, 67, 67, 0.85)'
+                }
             }
-        }
-    }
- });
+        },*/
 
-    $('#signup').on('click', function () {
+    });
+
+    $('#signup').on('click', function() {
         submitWork();
         //$.colorbox({href: "/index.html"});
     });
-        function submitWork() {
 
-            //this part sends to the server the chosen option from the SELECT
-            var selection = $('#poll').val();
-            var rawSelect = $("#poll option:selected").text();
-            var name = $('#name').val();
-            if (name == "" || name == " ") {
-                //no name given
-                console.log("no input");
-                $('#noInput').fadeIn("slow");
-                setTimeout(function () {
-                    $('#noInput').fadeOut("slow");
-                }, 10000);
-            } else {
+    function submitWork() {
 
-                $.ajax({
-                    //URL MIGHT NEED TO BE CHANGED !
-                    type: "GET",
-                    url: "../poll/pollHandler.php",
-                    data: {
-                        selection: selection,
-                        name: name,
-                        rawSelect: rawSelect
-                    },
-                    datatype: "html",
-                    success: function (result) {
-                        console.log(result);
-                        //var element = document.getElementById("signButton").parentNode;
-                        var element = document.getElementById("response");
-                        var para = document.createElement("p");
-                        para.setAttribute("class", "success");
-                        para.setAttribute("style", "border: 1px solid black;");
-                        var node = document.createTextNode("Thank you " + name + "! You've signed up for " + rawSelect);
-                        para.appendChild(node);
-                        element.appendChild(para);
-                        //document.getElementById("success").fadeOut("slow").delay(2000);
-                        //$('p', element)[0].fadeOut("slow").delay(2000);
-                        setTimeout(function () {
-                            $(".success").fadeOut("slow");
-                        }, 10000);
+        //this part sends to the server the chosen option from the SELECT
+        var selection = $('#poll').val();
+        var rawSelect = $("#poll option:selected").text();
+        var name = $('#name').val();
+        if (name == "" || name == " ") {
+            //no name given
+            console.log("no input");
+            $('#noInput').fadeIn("slow");
+            setTimeout(function() {
+                $('#noInput').fadeOut("slow");
+            }, 10000);
+        } else {
 
-                    },
-                    error: function (result) {
-                        alert("something went wrong, please try again later.");
-                        console.error(result);
-                    }
+            $.ajax({
+                //URL MIGHT NEED TO BE CHANGED !
+                type: "GET",
+                url: "../poll/pollHandler.php",
+                data: {
+                    selection: selection,
+                    name: name,
+                    rawSelect: rawSelect
+                },
+                datatype: "html",
+                success: function(result) {
+                    console.log(result);
+                    //var element = document.getElementById("signButton").parentNode;
+                    var element = document.getElementById("response");
+                    var para = document.createElement("p");
+                    para.setAttribute("class", "success");
+                    para.setAttribute("style", "border: 1px solid black;");
+                    var node = document.createTextNode("Thank you " + name + "! You've signed up for " + rawSelect);
+                    para.appendChild(node);
+                    element.appendChild(para);
+                    //document.getElementById("success").fadeOut("slow").delay(2000);
+                    //$('p', element)[0].fadeOut("slow").delay(2000);
+                    setTimeout(function() {
+                        $(".success").fadeOut("slow");
+                    }, 10000);
+
+                },
+                error: function(result) {
+                    alert("something went wrong, please try again later.");
+                    console.error(result);
+                }
 
 
-                });
-            }
-
+            });
         }
-    
-    
+
+    }
+
+
     function setCookie(key, value) {
         var expires = new Date();
         expires.setTime(expires.getTime() + (1 * 24 * 60 * 60 * 1000));
@@ -87,13 +111,13 @@ $(document).ready(function () {
 
         //GO GO CODE !
         var cookieVal = getCookie("partName");
-        if (!cookieVal){
+        if (!cookieVal) {
             //COOKIE DOESNT EXIST
             //WE WILL WAIT FOR SUBMIT
 
-        }else{
+        } else {
             //COOKIE EXISTS
-           $('#name').val(cookieVal);
+            $('#name').val(cookieVal);
         }
     }
 
@@ -101,46 +125,47 @@ $(document).ready(function () {
     //insert the daily sched
     var d = new Date();
     var day = d.getDay() + 1;
-    insertSelectOptions(day);
+    var hour = d.getHours() + 1;
+    hour >= 22 ? insertSelectOptions(day + 1) : insertSelectOptions(day);
 
 
     function insertSelectOptions(day) {
         switch (day) {
             case 1:
-            {
-                appendSun();
-                break;
-            }
+                {
+                    appendSun();
+                    break;
+                }
             case 2:
-            {
-                appendMon();
-                break;
-            }
+                {
+                    appendMon();
+                    break;
+                }
             case 3:
-            {
-                appendTue();
-                break;
-            }
+                {
+                    appendTue();
+                    break;
+                }
             case 4:
-            {
-                appendWed();
-                break;
-            }
+                {
+                    appendWed();
+                    break;
+                }
             case 5:
-            {
-                appendThu();
-                break;
-            }
+                {
+                    appendThu();
+                    break;
+                }
             case 6:
-            {
-                appendFri();
-                break;
-            }
+                {
+                    appendFri();
+                    break;
+                }
             case 7:
-            {
-                appendSat();
-                break;
-            }
+                {
+                    appendSat();
+                    break;
+                }
 
 
         }
@@ -151,14 +176,6 @@ $(document).ready(function () {
             .append($("<option></option>")
                 .attr("value", "wod1")
                 .text("06:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open1")
-                .text("06:00-11:00 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open2")
-                .text("15:00-21:30 OPEN GYM"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod2")
@@ -178,19 +195,10 @@ $(document).ready(function () {
     }
 
     function appendMon() {
-
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open1")
-                .text("06:00-11:00 OPEN GYM"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod1")
                 .text("09:00 WOD - HALL A"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open2")
-                .text("15:00-21:30 OPEN GYM"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod2")
@@ -221,15 +229,7 @@ $(document).ready(function () {
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod1")
-                .text("06:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open1")
-                .text("06:00-11:00 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open2")
-                .text("15:00-21:30 OPEN GYM"));
+                .text("06:00 WOD - HALL A"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod2")
@@ -241,58 +241,62 @@ $(document).ready(function () {
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod4")
-                .text("19:30 WOD"));
+                .text("19:00 GYMNASTICS - HALL B"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod5")
+                .text("19:30 WOD"));
+        $('#poll')
+            .append($("<option></option>")
+                .attr("value", "wod6")
+                .text("20:00 GirlsWOD - HALL B"));
+        $('#poll')
+            .append($("<option></option>")
+                .attr("value", "wod7")
                 .text("20:30 WOD"));
+
     }
 
     function appendWed() {
-
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open1")
-                .text("06:00-11:00 OPEN GYM"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod1")
-                .text("09:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open2")
-                .text("15:00-21:30 OPEN GYM"));
+                .text("09:00 WOD - HALL B"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod2")
-                .text("17:30 WOD"));
+                .text("16:30 TeenWOD"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod3")
-                .text("18:30 WOD"));
+                .text("17:30 WOD"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod4")
-                .text("19:30 WOD"));
+                .text("18:30 ENDURANCE"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod5")
-                .text("20:30 Mobility"));
+                .text("19:00 WOD - HALL B"));
+        $('#poll')
+            .append($("<option></option>")
+                .attr("value", "wod6")
+                .text("19:30 WOD"));
+        $('#poll')
+            .append($("<option></option>")
+                .attr("value", "wod7")
+                .text("20:00 WOD - HALL B"));
+        $('#poll')
+            .append($("<option></option>")
+                .attr("value", "wod8")
+                .text("20:30 MOBILITY"));
     }
 
     function appendThu() {
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod1")
-                .text("06:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open1")
-                .text("06:00-11:00 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open2")
-                .text("15:00-21:30 OPEN GYM"));
+                .text("06:00 WOD - HALL A"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod2")
@@ -304,19 +308,19 @@ $(document).ready(function () {
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod4")
-                .text("19:30 Endurance"));
+                .text("19:00 Weight Lifting - HALL B"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod5")
-                .text("20:30 RX club"));
+                .text("19:30 ENDURANCE"));
+        $('#poll')
+            .append($("<option></option>")
+                .attr("value", "wod6")
+                .text("20:00 RX CLUB - HALL B"));
     }
 
     function appendFri() {
 
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open1")
-                .text("08:00-14:00 OPEN GYM"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod2")
@@ -339,24 +343,20 @@ $(document).ready(function () {
                 .text("10:00 WOD"));
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "open1")
-                .text("10:00-12:00 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "open2")
-                .text("19:00-21:00 OPEN GYM"));
-        $('#poll')
-            .append($("<option></option>")
                 .attr("value", "wod2")
-                .text("19:00 WOD"));
+                .text("18:00 WOD"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod3")
+                .text("19:00 WOD"));
+        $('#poll')
+            .append($("<option></option>")
+                .attr("value", "wod4")
                 .text("20:00 WOD"));
 
     }
 
-//DONE WITH THE OPTIONS INJECTIONS
+    //DONE WITH THE OPTIONS INJECTIONS
 
 
     function submitWork() {
@@ -368,7 +368,7 @@ $(document).ready(function () {
             //no name given
             console.log("no input");
             $('#noInput').fadeIn("slow");
-            setTimeout(function () {
+            setTimeout(function() {
                 $('#noInput').fadeOut("slow");
             }, 10000);
         } else {
@@ -383,13 +383,13 @@ $(document).ready(function () {
                     rawSelect: rawSelect
                 },
                 datatype: "html",
-                success: function (result) {
+                success: function(result) {
                     console.log(result);
                     //set cookie for the part's name
-                    setCookie("partName",$('#name').val());
+                    setCookie("partName", $('#name').val());
 
                 },
-                error: function (result) {
+                error: function(result) {
                     alert("something went wrong, please try again later.");
                     console.error(result);
                 }
@@ -416,7 +416,10 @@ $(document).ready(function () {
         if ($(this).attr("dir") == "ltr") {
             var val = $(this).find("i").css("right");
             $(this).css('padding-left', '2.14285714em');
-            $(this).find("i").css({right: "auto", left: val});
+            $(this).find("i").css({
+                right: "auto",
+                left: val
+            });
         } else if (typeof $(this).attr("dir") == "undefined") {
             //do nothing
         } else {
@@ -427,8 +430,8 @@ $(document).ready(function () {
     //END OF CHANGE LIST DIRECTION
     //Ori is the rtl ltr king thanks. 
 
-    $(document).on('init.slides', function () {
-        $('.loading-container').fadeOut(function () {
+    $(document).on('init.slides', function() {
+        $('.loading-container').fadeOut(function() {
             $(this).remove();
         });
     });
@@ -448,7 +451,7 @@ $(document).ready(function () {
         scrollable: true
     });
 
-    $('#slides').bind('animated.slides', function () {
+    $('#slides').bind('animated.slides', function() {
 
         $(this).find('img').fadeTo(1000, 0.5, 'easeInOutQuad').delay(2000);
 
@@ -456,7 +459,7 @@ $(document).ready(function () {
         console.log('EFFECT HAPPENING - ANIMATION FINISHED SHOULD START ANIMATE');
     });
 
-    $('#slides').bind('animating.slides', function () {
+    $('#slides').bind('animating.slides', function() {
         $(this).find('img').fadeTo(500, 1).delay(2000);
     });
 
@@ -496,7 +499,7 @@ $(document).ready(function () {
         }
     });
 
-    recent.on('mousewheel', '.owl-stage', function (e) {
+    recent.on('mousewheel', '.owl-stage', function(e) {
         if (e.deltaY > 0) {
             owl.trigger('next.owl');
         } else {
@@ -508,11 +511,11 @@ $(document).ready(function () {
 
     var hammer = new Hammer(document.getElementById("slides"))
 
-    hammer.on('swipeleft', function (ev) {
+    hammer.on('swipeleft', function(ev) {
         $('#slides').superslides('animate', 'next');
     });
 
-    hammer.on('swiperight', function (ev) {
+    hammer.on('swiperight', function(ev) {
         $('#slides').superslides('animate', 'prev');
     });
 

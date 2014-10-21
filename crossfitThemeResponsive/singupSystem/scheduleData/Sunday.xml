@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<data>
+    <option>
+        <value>wod1</value>
+        <rawData>06:00 WOD</rawData>
+    </option>
+    <option>
+        <value>wod2</value>
+        <rawData>17:30 WOD</rawData>
+    </option>
+    <option>
+        <value>wod3</value>
+        <rawData>18:30 WOD</rawData>
+    </option>
+    <option>
+        <value>wod4</value>
+        <rawData>19:30 WOD</rawData>
+    </option>
+    <option>
+        <value>wod5</value>
+        <rawData>20:30 WOD</rawData>
+    </option>
+</data>

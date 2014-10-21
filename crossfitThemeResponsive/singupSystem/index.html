@@ -19,28 +19,44 @@
         </div>
         <div id="form">
             <div id="datePickDiv">
-                <input type="text" id="datepicker">תאריך
+                <p>תאריך</p>
+                <input type="text" id="datepicker">
+                <br />
+                <p>בחר יום</p>
+                <select id="dayPicker">
+                    <option disabled selected>Pick a day</option>
+                    <option>Sunday</option>
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                    <option>Saturday</option>
+                </select>
 
             </div>
+            <br />
             <table id="mainTable">
-                <tbody>
-                    <tr id="tableHeader">
-                        <th>מזהה</th>
-                        <th>שם האימון, שעה ואולם</th>
-                        <th>#</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text">
-                        </td>
-                        <td>
-                            <input type="text">
-                        </td>
-                        <td>
-                            <p>1</p>
-                        </td>
-                    </tr>
-                </tbody>
+
+                <tr id="tableHeader">
+                    <th>מזהה</th>
+                    <th>שם האימון, שעה ואולם</th>
+                    <th>#</th>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <p>1</p>
+                    </td>
+                </tr>
+ 
+
             </table>
         </div>
         <div id="buttons">
