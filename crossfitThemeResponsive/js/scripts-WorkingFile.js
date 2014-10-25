@@ -19,7 +19,7 @@ $(document).ready(function() {
             $("body").css({
                 'overflow-y': 'visible'
             });
-        },
+        }
 
         /*     closeBtn: true,
         helpers: {
@@ -42,58 +42,6 @@ $(document).ready(function() {
         //$.colorbox({href: "/index.html"});
     });
 
-    function submitWork() {
-
-        //this part sends to the server the chosen option from the SELECT
-        var selection = $('#poll').val();
-        var rawSelect = $("#poll option:selected").text();
-        var name = $('#name').val();
-        if (name == "" || name == " ") {
-            //no name given
-            console.log("no input");
-            $('#noInput').fadeIn("slow");
-            setTimeout(function() {
-                $('#noInput').fadeOut("slow");
-            }, 10000);
-        } else {
-
-            $.ajax({
-                //URL MIGHT NEED TO BE CHANGED !
-                type: "GET",
-                url: "../poll/pollHandler.php",
-                data: {
-                    selection: selection,
-                    name: name,
-                    rawSelect: rawSelect
-                },
-                datatype: "html",
-                success: function(result) {
-                    console.log(result);
-                    //var element = document.getElementById("signButton").parentNode;
-                    var element = document.getElementById("response");
-                    var para = document.createElement("p");
-                    para.setAttribute("class", "success");
-                    para.setAttribute("style", "border: 1px solid black;");
-                    var node = document.createTextNode("Thank you " + name + "! You've signed up for " + rawSelect);
-                    para.appendChild(node);
-                    element.appendChild(para);
-                    //document.getElementById("success").fadeOut("slow").delay(2000);
-                    //$('p', element)[0].fadeOut("slow").delay(2000);
-                    setTimeout(function() {
-                        $(".success").fadeOut("slow");
-                    }, 10000);
-
-                },
-                error: function(result) {
-                    alert("something went wrong, please try again later.");
-                    console.error(result);
-                }
-
-
-            });
-        }
-
-    }
 
 
     function setCookie(key, value) {
@@ -123,11 +71,13 @@ $(document).ready(function() {
 
     //POLL DATA INJETION
     //insert the daily sched
-    var d = new Date();
-    var day = d.getDay() + 1;
-    var hour = d.getHours() + 1;
-    hour >= 22 ? insertSelectOptions(day + 1) : insertSelectOptions(day);
+    if ($("#poll").length > 0) {
 
+        var d = new Date();
+        var day = d.getDay() + 1;
+        var hour = d.getHours() + 1;
+        hour >= 22 ? insertSelectOptions((day == 7 ? 0 : day) + 1) : insertSelectOptions(day);
+    }
 
     function insertSelectOptions(day) {
         switch (day) {
@@ -170,6 +120,7 @@ $(document).ready(function() {
 
         }
     }
+
 
     function appendSun() {
         $('#poll')
@@ -364,7 +315,7 @@ $(document).ready(function() {
         var selection = $('#poll').val();
         var rawSelect = $("#poll option:selected").text();
         var name = $('#name').val();
-        if (name == "" || name == " ") {
+        if (name === "" || name == " ") {
             //no name given
             console.log("no input");
             $('#noInput').fadeIn("slow");
@@ -387,6 +338,7 @@ $(document).ready(function() {
                     console.log(result);
                     //set cookie for the part's name
                     setCookie("partName", $('#name').val());
+                    setCookie("partTime", rawSelect);
 
                 },
                 error: function(result) {
@@ -509,7 +461,7 @@ $(document).ready(function() {
     });
 
 
-    var hammer = new Hammer(document.getElementById("slides"))
+    var hammer = new Hammer(document.getElementById("slides"));
 
     hammer.on('swipeleft', function(ev) {
         $('#slides').superslides('animate', 'next');
