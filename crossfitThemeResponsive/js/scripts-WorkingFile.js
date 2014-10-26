@@ -138,10 +138,18 @@ $(document).ready(function() {
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod4")
-                .text("19:30 WOD"));
+                .text("19:00 WOD"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod5")
+                .text("19:30 WOD"));
+        $('#poll')
+            .append($("<option></option>")
+                .attr("value", "wod6")
+                .text("20:00 WOD"));
+        $('#poll')
+            .append($("<option></option>")
+                .attr("value", "wod7")
                 .text("20:30 WOD"));
     }
 
