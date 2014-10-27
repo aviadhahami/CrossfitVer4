@@ -176,8 +176,16 @@ $(document).ready(function() {
                 .text("18:30 WOD"));
         $('#poll')
             .append($("<option></option>")
+                .attr("value", "wod6")
+                .text("19:00 WOD"));
+        $('#poll')
+            .append($("<option></option>")
                 .attr("value", "wod7")
                 .text("19:30 ENDURANCE"));
+        $('#poll')
+            .append($("<option></option>")
+                .attr("value", "wod8")
+                .text("20:00 WOD"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod9")

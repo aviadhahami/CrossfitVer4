@@ -6,7 +6,6 @@ $(document).ready(function() {
     today = today.getDay();
     var todayName = myDays[today];
 
-
     var cellCounter = 2;
 
     /* BUTTON HANDLERS */
@@ -53,6 +52,7 @@ $(document).ready(function() {
     $('#dayPicker').on('change', function(e) {
         var optionSelected = $("option:selected", this);
         var valueSelected = this.value;
+        console.log("dayPicker handler");
         getDefaultScheduleByDay(valueSelected);
     });
 
@@ -86,17 +86,22 @@ $(document).ready(function() {
         console.log(url);
         $("#response").text("");
         $("#poll").empty();
+
         $.ajax({
+
             type: "GET",
             url: url,
             datatype: "xml",
             statusCode: {
                 404: function() {
+
                     $("#response").text("אין קובץ העוקף את הלוז המקורי, מציג את ברירת המחדל להיום");
+                    console.log("404 code handler");
                     getDefaultScheduleByDay(todayName);
                 }
             },
             success: function(xml) {
+
                 console.log(xml);
                 $(xml).find("data option").each(function() {
                     var val = $(this).find("value").text();
@@ -109,6 +114,7 @@ $(document).ready(function() {
 
             },
             error: function(err) {
+
                 console.error('ERROR');
                 console.log(err.statusText);
             }
@@ -128,12 +134,14 @@ $(document).ready(function() {
             datatype: "xml",
             statusCode: {
                 404: function() {
+
                     var outputStr = "חלה שגיאת 404, קובץ לא נמצא";
                     $("#response").text(outputStr);
                 }
             },
             success: function(xml) {
-                cellCounter =2;
+
+                cellCounter = 2;
                 console.log(xml);
                 //Append to <select>
                 $(xml).find("data option").each(function() {
@@ -162,6 +170,7 @@ $(document).ready(function() {
 
             },
             error: function(err) {
+
                 console.error('ERROR');
                 console.log(err.statusText);
             }
