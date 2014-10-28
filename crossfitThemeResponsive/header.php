@@ -19,18 +19,19 @@
 
 
         <!--<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />-->
-        <script src="https://code.jquery.com/jquery-2.1.1.js"></script> 
-        <?php //wp_enqueue_script("jquery"); ?>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-2.1.1.js"></script> -->
+        <?php //wp_enqueue_script( "jquery"); ?>
 
         <!-- SHIT LOAD OF LINKS -->
 
-       
+
         <?php wp_head(); ?>
-        
-    
-        
-        
-            </head>
+
+
+
+
+    </head>
 
     <body <?php //body_class(); ?>>
         <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
