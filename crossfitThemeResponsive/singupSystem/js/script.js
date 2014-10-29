@@ -5,7 +5,7 @@ $(document).ready(function() {
 
     });
     //APPEND A LOT OF ROWS
-    for (var i = 0; i < 30; i++) {
+    for (var i = 0; i < 20; i++) {
         $("#mainTable tbody").append("<tr><td><input type='text' name='limit" + i + "'></td><td><input type='text' name='wod" + i + "'></td></tr>");
     }
 
