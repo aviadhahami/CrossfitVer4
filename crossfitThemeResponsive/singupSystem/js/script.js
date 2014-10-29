@@ -1,5 +1,6 @@
 $(document).ready(function() {
-
+    //GLOBALS
+    var _JsonParsed;
     $("#datepicker").datepicker({
         dateFormat: "dd-mm-y"
 
@@ -10,14 +11,23 @@ $(document).ready(function() {
     }
 
     //SHOW VALUES FROM INPUT
+    var _JsonBuffer;
+
     $("#submit").on("click", function() {
+        _JsonBuffer = '{"wods":[';
+
         $("#mainTable tbody tr td input").each(function() {
             //if value is not empty
             if ( !! $(this).val()) {
-                console.log($(this).val() + " and " + $(this).attr("name"));
+                _JsonBuffer += '{"' + $(this).attr("name") + '" : "' + $(this).val() + '" },';
+                // console.log($(this).val() + " and " + $(this).attr("name"));
             }
 
         });
+        _JsonBuffer = _JsonBuffer.substr(0, _JsonBuffer.length - 1);
+        _JsonBuffer += ']}';
+        _JsonParsed = JSON.parse(_JsonBuffer);
+
     });
 
 
