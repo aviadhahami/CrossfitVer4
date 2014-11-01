@@ -294,10 +294,32 @@
 
                 //*********************************//
                 //*********** END OF CASE ***********//
-                
-                 //wod10 case
+
+                //wod10 case
                 $(xml).find('participant').each(function() {
                     if ($(this).find('wod').text() == "wod10") {
+                        totalParts++;
+                        localParts++;
+                        if (count == 0) {
+                            count = 1;
+                            $("#output").append("<hr /><span class='title'>" + $(this).find('rawData').text() + "</span>");
+                        }
+                        $("#output").append("<li>" + $(this).find('name').text() + "</li>");
+
+                    }
+                });
+                if (count > 0) {
+                    $("#output").append("<span class='subTitle'>סך הכל משתתפים: " + localParts + "</span>");
+                }
+                localParts = 0;
+                count = 0;
+
+                //*********************************//
+                //*********** END OF CASE ***********//
+
+                //wod11 case
+                $(xml).find('participant').each(function() {
+                    if ($(this).find('wod').text() == "wod11") {
                         totalParts++;
                         localParts++;
                         if (count == 0) {
