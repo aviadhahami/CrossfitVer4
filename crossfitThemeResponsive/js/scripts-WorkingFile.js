@@ -232,7 +232,7 @@ $(document).ready(function() {
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod7")
-                .text("19:00 GYMNASTICS"));
+                .text("19:00 WOD"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod8")
