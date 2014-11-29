@@ -129,10 +129,6 @@ $(document).ready(function() {
                 .text("06:00 WOD"));
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "wod2")
-                .text("07:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
                 .attr("value", "wod3")
                 .text("09:00 WOD"));
         $('#poll')
@@ -211,10 +207,6 @@ $(document).ready(function() {
                 .text("06:00 WOD"));
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "wod2")
-                .text("07:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
                 .attr("value", "wod3")
                 .text("09:00 WOD"));
         $('#poll')
@@ -288,10 +280,6 @@ $(document).ready(function() {
             .append($("<option></option>")
                 .attr("value", "wod1")
                 .text("06:00 WOD"));
-        $('#poll')
-            .append($("<option></option>")
-                .attr("value", "wod2")
-                .text("07:00 WOD"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod3")
