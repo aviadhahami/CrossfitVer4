@@ -170,6 +170,7 @@
                         localParts++;
                         if (count == 0) {
                             count = 1;
+                            console.log($(this).find('rawData'));
                             $("#output").append("<hr /><span class='title'>" + $(this).find('rawData').text() + "</span>");
                         }
                         $("#output").append("<li>" + $(this).find('name').text() + "</li>");

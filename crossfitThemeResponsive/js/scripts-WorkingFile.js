@@ -315,15 +315,15 @@ $(document).ready(function() {
 
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "wod2")
+                .attr("value", "wod1")
                 .text("11:00 STRONGMAN"));
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "wod3")
+                .attr("value", "wod2")
                 .text("12:00 WOD"));
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "wod4")
+                .attr("value", "wod3")
                 .text("13:00 ENDURANCE"));
 
     }

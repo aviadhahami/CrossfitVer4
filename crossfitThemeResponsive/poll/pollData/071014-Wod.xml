@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+       <participant>
+              <name>guy</name>
+              <wod>wod3</wod>
+              <rawData>18:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>יוסי דדיאשוילי</name>
+              <wod>wod4</wod>
+              <rawData>19:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>גיא</name>
+              <wod>wod1</wod>
+              <rawData>06:00 WOD</rawData>
+          </participant>
+       <participant>
+              <name>גיא פשיגודה</name>
+              <wod>wod1</wod>
+              <rawData>06:00 WOD</rawData>
+          </participant>
+       <participant>
+              <name>אהוד</name>
+              <wod>wod3</wod>
+              <rawData>18:30 WOD</rawData>
+          </participant>
+       
+       <participant>
+              <name>Rita Fainaru</name>
+              <wod>wod5</wod>
+              <rawData>20:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>איתן בנדרסקי</name>
+              <wod>wod3</wod>
+              <rawData>18:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>רועי אופנהיימר</name>
+              <wod>wod2</wod>
+              <rawData>17:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>איתי</name>
+              <wod>wod2</wod>
+              <rawData>17:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>שניר</name>
+              <wod>wod2</wod>
+              <rawData>17:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>יניב קלימן</name>
+              <wod>wod3</wod>
+              <rawData>18:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>דימיטרי קליימן</name>
+              <wod>wod4</wod>
+              <rawData>19:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>אורי פרל</name>
+              <wod>wod4</wod>
+              <rawData>19:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>Shuki</name>
+              <wod>wod3</wod>
+              <rawData>18:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>אלדד</name>
+              <wod>wod2</wod>
+              <rawData>17:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>רון</name>
+              <wod>wod4</wod>
+              <rawData>19:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>Solange</name>
+              <wod>wod2</wod>
+              <rawData>17:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>שחר חביבי</name>
+              <wod>wod3</wod>
+              <rawData>18:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>Shahar Havivi</name>
+              <wod>wod3</wod>
+              <rawData>18:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>דין רוזנברג</name>
+              <wod>open2</wod>
+              <rawData>15:00-21:30 OPEN GYM</rawData>
+          </participant>
+       <participant>
+              <name>יוני</name>
+              <wod>wod4</wod>
+              <rawData>19:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>מיכאל</name>
+              <wod>wod4</wod>
+              <rawData>19:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>גשדגשד</name>
+              <wod>wod4</wod>
+              <rawData>19:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>דפנה</name>
+              <wod>wod4</wod>
+              <rawData>19:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>רותי</name>
+              <wod>wod4</wod>
+              <rawData>19:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>יוחנן</name>
+              <wod>wod4</wod>
+              <rawData>19:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>רוני</name>
+              <wod>wod4</wod>
+              <rawData>19:30 WOD</rawData>
+          </participant>
+       <participant>
+              <name>דנה אולבסקי</name>
+              <wod>wod4</wod>
+              <rawData>19:30 WOD</rawData>
+          </participant>
+   <participant><name>תומר</name><wod>wod3</wod><rawData>18:30 WOD</rawData></participant><participant><name>Tomer tzach </name><wod>wod3</wod><rawData>18:30 WOD</rawData></participant><participant><name>טאל</name><wod>wod2</wod><rawData>17:30 WOD</rawData></participant><participant><name>קריסטינה פינחסוב</name><wod>wod4</wod><rawData>19:30 WOD</rawData></participant><participant><name>חן כדורי</name><wod>wod4</wod><rawData>19:30 WOD</rawData></participant><participant><name>חיליק </name><wod>wod3</wod><rawData>18:30 WOD</rawData></participant><participant><name>איגור</name><wod>wod4</wod><rawData>19:30 WOD</rawData></participant><participant><name>רוי קורמוש</name><wod>wod2</wod><rawData>17:30 WOD</rawData></participant><participant><name>שני</name><wod>wod4</wod><rawData>19:30 WOD</rawData></participant><participant><name>אלן</name><wod>wod4</wod><rawData>19:30 WOD</rawData></participant><participant><name>אלן אלחדף</name><wod>wod4</wod><rawData>19:30 WOD</rawData></participant><participant><name>אורי לאלו</name><wod>wod2</wod><rawData>17:30 WOD</rawData></participant><participant><name>שגיא</name><wod>wod3</wod><rawData>18:30 WOD</rawData></participant><participant><name>לאלו אסף</name><wod>wod3</wod><rawData>18:30 WOD</rawData></participant><participant><name>Yossi k</name><wod>wod2</wod><rawData>17:30 WOD</rawData></participant><participant><name>דנה אורן</name><wod>wod3</wod><rawData>18:30 WOD</rawData></participant><participant><name>Tolik</name><wod>wod5</wod><rawData>20:30 WOD</rawData></participant><participant><name>אדי ויינשטיין</name><wod>wod4</wod><rawData>19:30 WOD</rawData></participant><participant><name>אופיר בן עטייה</name><wod>wod3</wod><rawData>18:30 WOD</rawData></participant><participant><name>CHECK</name><wod>wod1</wod><rawData>06:00 WOD</rawData></participant><participant><name>תומר מור</name><wod>wod3</wod><rawData>18:30 WOD</rawData></participant><participant><name>עומרי סלע</name><wod>wod4</wod><rawData>19:30 WOD</rawData></participant><participant><name>ירין זאבי</name><wod>wod4</wod><rawData>19:30 WOD</rawData></participant><participant><name>ירון לוי</name><wod>wod5</wod><rawData>20:30 WOD</rawData></participant><participant><name>לי-היא</name><wod>wod5</wod><rawData>20:30 WOD</rawData></participant><participant><name>ליהיא</name><wod>wod5</wod><rawData>20:30 WOD</rawData></participant><participant><name>עוז </name><wod>wod5</wod><rawData>20:30 WOD</rawData></participant><participant><name>שרון רשתי</name><wod>wod5</wod><rawData>20:30 WOD</rawData></participant><participant><name>חן שינה</name><wod>open1</wod><rawData>06:00-11:00 OPEN GYM</rawData></participant><participant><name>עומר טנגי אימון 13:00</name><wod>open1</wod><rawData>06:00-11:00 OPEN GYM</rawData></participant></data>
