@@ -205,6 +205,7 @@ $(document).ready(function() {
             .append($("<option></option>")
                 .attr("value", "wod1")
                 .text("06:00 WOD"));
+
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod3")
@@ -264,7 +265,7 @@ $(document).ready(function() {
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod7")
-                .text("19:30 ENDURANCE"));
+                .text("19:30 WOD"));
         $('#poll')
             .append($("<option></option>")
                 .attr("value", "wod8")
@@ -280,34 +281,39 @@ $(document).ready(function() {
             .append($("<option></option>")
                 .attr("value", "wod1")
                 .text("06:00 WOD"));
+
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "wod3")
+                .attr("value", "wod2")
                 .text("09:00 WOD"));
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "wod4")
+                .attr("value", "wod3")
                 .text("10:00 WOD"));
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "wod5")
+                .attr("value", "wod4")
                 .text("17:30 WOD"));
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "wod6")
+                .attr("value", "wod5")
                 .text("18:30 WOD"));
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "wod7")
+                .attr("value", "wod6")
                 .text("19:00 Weight Lifting"));
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "wod8")
+                .attr("value", "wod7")
                 .text("19:30 WOD"));
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "wod9")
+                .attr("value", "wod8")
                 .text("20:00 RX CLUB"));
+        $('#poll')
+            .append($("<option></option>")
+                .attr("value", "wod9")
+                .text("20:30 WOD"));
 
     }
 
@@ -315,15 +321,15 @@ $(document).ready(function() {
 
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "wod1")
+                .attr("value", "wod2")
                 .text("11:00 STRONGMAN"));
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "wod2")
+                .attr("value", "wod3")
                 .text("12:00 WOD"));
         $('#poll')
             .append($("<option></option>")
-                .attr("value", "wod3")
+                .attr("value", "wod4")
                 .text("13:00 ENDURANCE"));
 
     }
