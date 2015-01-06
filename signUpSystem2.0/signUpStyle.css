@@ -1,12 +1,30 @@
-html,body,div{
+html,
+body,
+div {
     margin: 0 auto;
     padding: 0;
 }
-#header{
+table{
+    text-align: center;
+    min-width: 800px;
+    border-collapse: collapse;
+}
+table,td,th{
+    border: 1px solid black;
+}
+#header {
     margin: 0 auto;
     text-align: center;
 }
-.textCenter{
+#pageBody,#footer {
+    align-content: center;
+    display: inline-block;
+}
+.textCenter {
     text-align: center;
     margin: 0 auto;
+}
+.subTitle {
+    color: green;
+    font-size: 2em;
 }
