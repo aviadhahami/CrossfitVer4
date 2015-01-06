@@ -11,7 +11,7 @@
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <title>
-            <?php wp_title( ''); ?>
+            <?php wp_title(''); ?>
         </title>
         <!--FOLLOWING LINE CHANGES THE BROWSER'S TAB ICON -->
         <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/img/BrowserLogo.ico">
