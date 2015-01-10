@@ -10,8 +10,7 @@
     <script src="suh.js"></script>
 </head>
 
-<body ng-init="days = [
-                  {name: 'ראשון'},{name: 'שני'},{name: 'שלישי'},{name: 'רביעי'},{name: 'חמישי'},{name: 'שישי'},{name: 'שבת'}]">
+<body ng-init="days = [{name: 'ראשון'},{name: 'שני'},{name: 'שלישי'},{name: 'רביעי'},{name: 'חמישי'},{name: 'שישי'},{name: 'שבת המלכה'}]">
     <div id="content" class="textCenter">
         <div id="header">
             <h1>SIGN UP SYSTEM</h1>
@@ -26,7 +25,7 @@
                 </tr>
                 <tr ng-repeat="i in [1,2,3,4,5,6,7,8,9,10,11]">
                     <td ng-repeat="day in days">
-                        <input type="text"/>
+                        <input type="text" />
                     </td>
                 </tr>
             </table>
@@ -46,7 +45,5 @@
         </div>
     </div>
 </body>
-
-
 
 </html>
